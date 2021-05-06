@@ -7,10 +7,10 @@ from functools import wraps
 app = Flask(__name__)
 
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'yaswanth2001'
-app.config['MYSQL_DB'] = 'virtuallab'
+app.config['MYSQL_HOST'] = 'sql6.freesqldatabase.com'
+app.config['MYSQL_USER'] = 'sql6410732'
+app.config['MYSQL_PASSWORD'] = 'trV4Z14Q3Q'
+app.config['MYSQL_DB'] = 'sql6410732'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
