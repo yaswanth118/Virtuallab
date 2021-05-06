@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 0.1 g of the salt in a test tube and add 1-2 mL of dilute sulphuric acid.
+          Observe the change, if any, at room temperature. choose any of following options
+          according to your observation.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <form  style="font-size: 18px">
+          <input type="radio" name="o" id ="x1" >
+          <label for="x1" onclick="exec1()">A colourless, odourless gas is evolved with brisk effervescence, which turns lime water milky </label>
+          <br><br>
+          <input type="radio" name="o" id ="x2" >
+           <label for="x2" onclick="exec2()" style="color: darkblue ">Colourless gas with the smell of rotten eggs is evolved which turns lead acetate paper black</label>
+          <br><br>
+          <input type="radio" name="o" id ="x3" >
+           <label for="x3" onclick="exec3()">Colourless gas with a pungent smell, like burning sulphur which turns acidified K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> solution green</label>
+          <br><br>
+              <input type="radio" name="o" id ="x4" >
+            <label for="x4" onclick="exec4()" style="color: darkblue ">Brown fumes which turn acidified potassium iodide solution containing starch solution blue</label>
+          <br><br>
+          <input type="radio" name="o" id ="x5" >
+           <label for="x5" onclick="exec5()">Colourless vapours with smell of vinegar. Vapours turn blue litmus red</label>
+          <br><br>
+          <input type="radio" name="o" id ="x6" >
+           <label for="x6" onclick="exec6()" style="color: darkblue  ">None of the Above inferences are observed.</label>
+      </form>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Detailed Reaction</h2>
+        <p style="border: 5px solid orange;border-radius: 15px;padding: 40px" id="para"></p>
+        <div style="padding-left: 70%" id ="blk1">
+        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>
+        </div>
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/anion/step2" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to next step</span></button></a>
+        </div>
+
+      </div>
+      <script src="{{url_for('static',filename='step1.js')}}"></script>
+
+  </div>
+  </div>
+{% endblock %}

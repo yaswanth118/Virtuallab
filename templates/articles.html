@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div style="color: #464EB8"><h1><i>Notes Section</i></h1></div>
+    <div class="jumbotron" id ="Welcome" style="opacity : 0.9">
+    <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px">
+  <ul>
+    {% for article in articles %}
+      <h3><li><a href="article/{{article.id}}" style="color: black">{{article.title}}</a></li></h3>
+        <br><hr style="height: 5px;border-width:0;color:#464EB8;background-color:#464EB8"><br>
+    {% endfor %}
+  </ul>
+    </div>
+    </div>
+{% endblock %}

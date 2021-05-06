@@ -1,0 +1,138 @@
+{% extends 'layout.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2>Select the Anion based on the tests</h2></div>
+      <!--<p>Select the ion you got</p>-->
+
+      <!--<div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>-->
+      
+      <style>
+      input[type=radio] {
+        float: left;
+      }
+
+      label {
+        margin-left: 30px;
+        display: block;
+       }
+      </style>
+      
+      <form  style="font-size: 18px">
+          <input type="radio" name="o" id ="x1" >
+          <label for="x1" onclick="exec2(this.id)" id="1">Cl<sup>-</sup><h id = 'p1'>  &#9989 </h></label>
+          <br><br>
+          <input type="radio" name="o" id ="x2" >
+          <label for="x2" onclick="exec1(this.id)" style="color: darkblue" id="2">CO<sub>3</sub><sup>-2</sup> <h id = 'p2'>&#10060  </h></label>
+          <br><br>
+          <input type="radio" name="o" id ="x3" >
+          <label for="x3" onclick="exec1(this.id)" id="3">S<sup>2-</sup>  <h id = 'p3'>  &#10060</h></label>
+          <br><br>
+          <input type="radio" name="o" id ="x4" >
+          <label for="x4" onclick="exec1(this.id)" style="color: darkblue" id="4">NO<sub>3</sub><sup>-1</sup>  <h id = 'p4'>  &#10060 </h></label>
+          <br><br>
+          <input type="radio" name="o" id ="x5" >
+           <label for="x5" onclick="exec1(this.id)" id="5">SO<sub>4</sub><sup>2-</sup>  <h id = 'p5'>  &#10060 </h></label>
+      </form>
+      
+      <div id = "out">
+      
+      <h2 style="color: #464EB8" id = "head">Details</h2>
+        <p style="border: 5px solid green;border-radius: 15px;padding: 40px" id="text"></p>
+        
+        <div style="padding-left: 70%" id ="in">
+        <a href="/BaCl2" >
+        <button class="button2" style="font-size: 15px;padding: 12px;width: 200px">
+        <span>Go to Home</span>
+        </button>
+        </a>
+        </div>
+
+      </div>
+      
+      <script>
+      OUT = document.getElementById("out");
+      OUT.style.dispaly = "none"; 
+      TEXT = document.getElementById("text");
+      TEXT.style.display = "none";
+      HEAD = document.getElementById("head");
+      HEAD.style.display = "none";
+      IN = document.getElementById("in");
+      IN.style.display = "none";
+     
+      for (var i=1;i<=5;i++)
+      {
+         document.getElementById("p"+i.toString()).style.display="none";
+      }
+      
+      function exec2(id)
+      {
+          OUT.style.display = "block";
+          TEXT.style.display = "block";
+          HEAD.style.display = "block";
+          IN.style.display = "block";
+          TEXT.innerHTML = 'If the salt on treatment with warm conc. H<sub>2</sub>SO<sub>4</sub> gives a colourless gas with pungent smell or a gas which gives dense white fumes with ammonia solution, then the salt may contain Chloride ions and the following reaction occurs.'+
+'<p style="text-align: center;">'+
+'Cl<sup>-</sup> + H<sub>2</sub>SO<sub>4</sub> &#8594; HSO<sub>4</sub><sup>-</sup> + HCl<br>'+
+'HCl + NH<sub>3</sub> &#8594; NH<sub>4</sub>Cl&#8593;</p>'+
+'Salt solution acidified with dilute HNO3 on addition of silver nitrate solution gives a curdy white precipitate soluble in ammonium hydroxide solution. This indicates the presence of Chloride ions in the salt.'+
+'<p style="text-align: center;">'+
+'Cl<sup>-</sup> + AgNO<sub>3</sub> &#8594; NO<sub>3</sub><sup>-</sup> + AgCl&#8595; (white ppt.)<br>'+
+'AgCl + 2NH<sub>4</sub>OH &#8594; [Ag(NH<sub>3</sub>)<sub>2</sub>]Cl + 2H<sub>2</sub>O</p>'+
+'<b>Other confirmation tests:</b><br>'+
+'1. If a salt gives effervescence on heating with conc. H<sub>2</sub>SO<sub>4</sub> and MnO<sub>2</sub> and a light greenish yellow pungent gas is evolved, this indicates the presence of Chloride ions.'+
+'<p style="text-align: center;">'+
+'MnO<sub>2</sub> + 2Cl<sup>-</sup> + 2H<sub>2</sub>SO<sub>4</sub> &#8594; SO<sub>4</sub><sup>2-</sup> + MnSO<sub>4</sub> + 2H<sub>2</sub>O + Cl<sub>2</sub>&#8593;</p>'+
+'2. Mix a little amount of salt and an equal amount of solid potassium dichromate (K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>) in test tube and add conc. H<sub>2</sub>SO<sub>4</sub> to it. Heat the test tube and pass the evolved gas through sodium hydroxide solution. If a yellow solution is obtained, acidify the solution with acetic acid and then add lead acetate solution. Formation of a yellow precipitate of lead chromate confirms the presence of chloride ions in the salt. This test is called chromyl chloride test.'+
+'<p style="text-align: center;">'+
+'4Cl<sup>-</sup> + K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + 6H<sub>2</sub>SO<sub>4</sub> &#8594; 2KHSO<sub>4</sub> + 2CrO<sub>2</sub>Cl<sub>2</sub> + 4HSO<sub>4</sub><sup>-</sup> + 3H<sub>2</sub>O<br>'+
+'CrO<sub>2</sub>Cl<sub>2</sub> + 4NaOH &#8594; Na<sub>2</sub>CrO<sub>4</sub> + 2NaCl + 2H<sub>2</sub>O<br>'+
+'(CH<sub>3</sub>COO)<sub>2</sub>Pb + Na<sub>2</sub>CrO<sub>4</sub> &#8594; PbCrO<sub>4</sub>&#8595; (Yellow ppt.) + 2CH<sub>3</sub>COONa</p>';
+          TEXT.style.border="5px solid green"
+          for (var i=1;i<=5;i++)
+          {
+             document.getElementById("p"+i.toString()).style.display="none";
+          }
+          document.getElementById("p"+id.toString()).style.display="inline";
+      }
+      
+      function exec1(id)
+      {
+          OUT.style.display = "block";
+          TEXT.style.display = "block";
+          HEAD.style.display = "block";
+          IN.style.display = "block";
+          TEXT.innerHTML = 'If the salt on treatment with warm conc. H<sub>2</sub>SO<sub>4</sub> gives a colourless gas with pungent smell or a gas which gives dense white fumes with ammonia solution, then the salt may contain Chloride ions and the following reaction occurs.'+
+'<p style="text-align: center;">'+
+'Cl<sup>-</sup> + H<sub>2</sub>SO<sub>4</sub> &#8594; HSO<sub>4</sub><sup>-</sup> + HCl<br>'+
+'HCl + NH<sub>3</sub> &#8594; NH<sub>4</sub>Cl&#8593;</p>'+
+'Salt solution acidified with dilute HNO3 on addition of silver nitrate solution gives a curdy white precipitate soluble in ammonium hydroxide solution. This indicates the presence of Chloride ions in the salt.'+
+'<p style="text-align: center;">'+
+'Cl<sup>-</sup> + AgNO<sub>3</sub> &#8594; NO<sub>3</sub><sup>-</sup> + AgCl&#8595; (white ppt.)<br>'+
+'AgCl + 2NH<sub>4</sub>OH &#8594; [Ag(NH<sub>3</sub>)<sub>2</sub>]Cl + 2H<sub>2</sub>O</p>'+
+'<b>Other confirmation tests:</b><br>'+
+'1. If a salt gives effervescence on heating with conc. H<sub>2</sub>SO<sub>4</sub> and MnO<sub>2</sub> and a light greenish yellow pungent gas is evolved, this indicates the presence of Chloride ions.'+
+'<p style="text-align: center;">'+
+'MnO<sub>2</sub> + 2Cl<sup>-</sup> + 2H<sub>2</sub>SO<sub>4</sub> &#8594; SO<sub>4</sub><sup>2-</sup> + MnSO<sub>4</sub> + 2H<sub>2</sub>O + Cl<sub>2</sub>&#8593;</p>'+
+'2. Mix a little amount of salt and an equal amount of solid potassium dichromate (K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>) in test tube and add conc. H<sub>2</sub>SO<sub>4</sub> to it. Heat the test tube and pass the evolved gas through sodium hydroxide solution. If a yellow solution is obtained, acidify the solution with acetic acid and then add lead acetate solution. Formation of a yellow precipitate of lead chromate confirms the presence of chloride ions in the salt. This test is called chromyl chloride test.'+
+'<p style="text-align: center;">'+
+'4Cl<sup>-</sup> + K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + 6H<sub>2</sub>SO<sub>4</sub> &#8594; 2KHSO<sub>4</sub> + 2CrO<sub>2</sub>Cl<sub>2</sub> + 4HSO<sub>4</sub><sup>-</sup> + 3H<sub>2</sub>O<br>'+
+'CrO<sub>2</sub>Cl<sub>2</sub> + 4NaOH &#8594; Na<sub>2</sub>CrO<sub>4</sub> + 2NaCl + 2H<sub>2</sub>O<br>'+
+'(CH<sub>3</sub>COO)<sub>2</sub>Pb + Na<sub>2</sub>CrO<sub>4</sub> &#8594; PbCrO<sub>4</sub>&#8595; (Yellow ppt.) + 2CH<sub>3</sub>COONa</p>';
+          TEXT.style.border="5px solid red"
+          for (var i=1;i<=5;i++)
+          {
+             document.getElementById("p"+i.toString()).style.display="none";
+          }
+          document.getElementById("p1").style.display="inline";
+          document.getElementById('p'+id.toString()).style.display="inline";
+      }
+      
+      </script>
+
+  </div>
+  </div>
+{% endblock %}

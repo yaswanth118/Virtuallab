@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Add NaOH AND H<sub>3</sub>PO<sub>4</sub> in the ratio 2:1. Heat the sample for 10-15 minutes.
+          Add sodium complex of cobalt cyanide.
+
+	  </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <form  style="font-size: 18px">
+          <input type="radio" name="o" id ="x1" >
+          <label for="x1" onclick="exec1()">observation of a floculant white precipitate after heating</label>
+          <br><br>
+          
+          <input type="radio" name="o" id ="x1" >
+          <label for="x1" onclick="exec3()" style="color: darkblue">observation of yellow precipitate which is crystalline in nature</label>
+          <br><br>
+          
+          <input type="radio" name="o" id ="x6" >
+           <label for="x6" onclick="exec2()" >
+           None of the Above inferences are observed.
+           </label>
+      </form>
+      
+      <div id = "out">
+      
+      <h2 style="color: #464EB8" id = "head">Result</h2>
+        <p style="border: 5px solid green;border-radius: 15px;padding: 40px" id="text"></p>
+        
+        <div style="padding-left: 70%" id = "in" >
+        <a href="/" >
+        <button class="button2" style="font-size: 15px;padding: 12px;width: 200px">
+        <span>Go to Home</span>
+        </button>
+        </a>
+        </div>
+
+      </div>
+      
+      <script>
+      OUT = document.getElementById("out");
+      OUT.style.dispaly = "none"; 
+      TEXT = document.getElementById("text");
+      TEXT.style.display = "none";
+      HEAD = document.getElementById("head");
+      HEAD.style.display = "none";
+      IN = document.getElementById("in");
+      IN.style.display = "none";
+      function exec1()
+      {
+          OUT.style.display = "block";
+          TEXT.style.display = "block";
+          HEAD.style.display = "block";
+          IN.style.display = "block";
+          TEXT.innerHTML = "Magnesium(&#8545) Ion is present";
+          TEXT.style.border="5px solid green"
+      }
+      
+      function exec2()
+      {
+          OUT.style.display = "block";
+          TEXT.style.display = "block";
+          HEAD.style.display = "block";
+          IN.style.display = "block";
+          TEXT.innerHTML = "Cation detection is ended";
+          TEXT.style.border="5px solid red"
+      }
+      
+      function exec3()
+      {
+          OUT.style.display = "block";
+          TEXT.style.display = "block";
+          HEAD.style.display = "block";
+          IN.style.display = "block";
+          TEXT.innerHTML = "Potassium(&#8544) Ion is present";
+          TEXT.style.border="5px solid green"
+      }
+      
+      </script>
+
+  </div>
+  </div>
+{% endblock %}

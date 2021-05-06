@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <style>
+        body{
+			background-image: url({{ url_for('static',filename='background.jpg') }});
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 100vh;
+		}
+    </style>
+  <div class="jumbotron text-center" id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <h1 >Welcome To Virtual Labs</h1>
+    <p class="lead">This application is built for the intermediate students.</p>
+    {% if session.logged_in == NULL %}
+        <a href="/register"><button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px"><span>Register</span></button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<a href="/login"><button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px"><span>Login</span></button></a>
+    {% else %}
+        <a href="/" id = "p">
+             <button class="button2" onclick = "change_path()" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+             <span>Start Test</span>
+             </button>
+          <script>
+            var array=['/CuCO3','/ZnS','/BaCl2','/NH4NO3','/Fe2SO43'];
+            function change_path(){
+               document.getElementById('p').href=array[(Math.floor(Math.random()*10))%5];
+            }
+          </script></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<a href="/Referlab/salt">
+            <button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+                <span>Refer Lab</span>
+            </button>
+        </a>
+    {% endif %}
+  </div>
+  </div>
+{% endblock %}

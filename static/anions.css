@@ -1,0 +1,30 @@
+/*body{*/
+/*            background-color: red;*/
+/*}*/
+.container{
+    display: flex;
+}
+.images{
+    height: 100%;
+    flex-flow: row;
+    width: 90%;
+}
+.icons{
+    flex-grow: 1;
+}
+.icons > div {
+    padding: 10px;
+}
+.circular-icons {
+    border-radius: 50%;
+}
+.results-of-reaction::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.reaction {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}

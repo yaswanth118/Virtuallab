@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 1 mL of salt solution in water in a test tube. Add 2 mL conc. of H<sub>2</sub>SO<sub>4</sub> and mix thoroughly. Cool the mixture under the tap. Add freshly prepared ferrous sulphate along the sides of the test tube without shaking.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <p>A dark brown ring is formed at the junction of the two solutions.</p>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Is the Inference observed?</h2>
+          <br>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: green" onclick="P1()"><span>Yes</span></button>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: red" onclick="P2()"><span>No</span></button>
+          <br><br><br>
+          <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"></p>
+          <script>
+                a=document.getElementById("para");
+                a.style.display="none";
+                function P1(){
+                    a.style.display="block";
+                    a.style.border="5px solid green";
+                    a.innerHTML="<b>NaNO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> &#8594; NaHSO<sub>4</sub> + HNO<sub>3</sub></b><br><br>" +
+                        "<b>4HNO<sub>3</sub> &#8594; 4NO<sub>2</sub> + O<sub>2</sub> + 2H<sub>2</sub>O</b><br><br>" +
+                        "<b>2NaNO<sub>3</sub> + 4H<sub>2</sub>SO<sub>4</sub> + 3Cu &#8594; 3CuSO<sub>4</sub> + Na<sub>2</sub>SO<sub>4</sub> + 4H<sub>2</sub>O + 2NO</b><br><br>" +
+                        "The brown ring at the junction of the solutions confirms that the anion is NO<sub>3</sub><sup>-</sup>.";
+                }
+                function P2(){
+                    a.style.display="block";
+                    a.style.border="5px solid red";
+                    a.innerHTML="Sorry! we can't find the anion in the salt.";
+                }
+          </script>
+{#        <div style="padding-left: 70%" id ="blk1">#}
+{#        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>#}
+{#        </div>#}
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/salt" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to home</span></button></a>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+{% endblock %}

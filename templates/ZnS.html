@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <style>
+        body{
+			background-image: url({{ url_for('static',filename='background.jpg') }});
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 100vh;
+		}
+    </style>
+  <div class="jumbotron text-center" id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <!--<h1 >Welcome To Virtual Labs</h1>-->
+    <!--<h1 class="lead">Detections of Ions in ZnS</h1>-->
+    {% if session.logged_in == NULL %}
+        <a href="/register"><button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px"><span>Register</span></button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	<a href="/login"><button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px"><span>Login</span></button></a>
+    {% else %}
+
+
+        <a href="/Zn" >
+        <button class="button2" onclick = "change_path()" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+        Detect Cation
+        </button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      	<a href="/S">
+      	<button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+      	Detect Anion
+      	</button></a>
+    {% endif %}
+  </div>
+  </div>
+{% endblock %}

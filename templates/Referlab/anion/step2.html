@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 0.1g of salt in a test tube and add 3-4 drops of Conc.Sulphuric acid. Observe the changes, if any, at room temperature. choose any of following options
+          according to your observation.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <form  style="font-size: 18px">
+          <input type="radio" name="o" id ="x1" >
+          <label for="x1" onclick="exec1()">A colourless gas with pungent smell,gives dense white fumes when a rod dipped in NH<sub>4</sub>OH is brought <br> near the mouth of test tube. </label>
+          <br><br>
+          <input type="radio" name="o" id ="x2" >
+          <label for="x2" onclick="exec2()" style="color: darkblue ">Reddish brown gas with a pungent odour is evolved. Intensity of reddish gas increases on heating <br>with the addition of solid MnO <sub>2</sub> to the reaction mixture. Solution also acquires red colour.</label>
+          <br><br>
+          <input type="radio" name="o" id ="x3" >
+           <label for="x3" onclick="exec3()">Violet vapours, which turn starch paper
+                blue and a layer of violet sublimate is
+                formed on the sides<br> of the tube. Fumes
+               become dense on adding MnO <sub>2</sub> to the
+                reaction mixture.</label>
+          <br><br>
+              <input type="radio" name="o" id ="x4" >
+            <label for="x4" onclick="exec4()" style="color: darkblue ">Brown fumes evolve which become dense
+                upon heating the reaction mixture after
+                addition of copper<br> turnings and the
+                solution acquires blue colour. </label>
+          <br><br>
+          <input type="radio" name="o" id ="x5" >
+           <label for="x5" onclick="exec5()">Colourless, odourless gas is evolved
+                which turns lime water milky and the
+                gas coming out of lime<br> water burns with
+                a blue flame, if ignited.</label>
+          <br><br>
+          <input type="radio" name="o" id ="x6" >
+           <label for="x6" onclick="exec6()" style="color: darkblue  ">None of the Above inferences are observed.</label>
+      </form>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Detailed Reaction</h2>
+        <p style="border: 5px solid orange;border-radius: 15px;padding: 40px" id="para"></p>
+        <div style="padding-left: 70%" id ="blk1">
+        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>
+        </div>
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/anion/step3" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to next step</span></button></a>
+        </div>
+
+      </div>
+      <script src="{{url_for('static',filename='step2.js')}}"></script>
+
+  </div>
+  </div>
+{% endblock %}

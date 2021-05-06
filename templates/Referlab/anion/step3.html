@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          If the anion isn't detected in the step-I and step-II then it might be SO<sub>4</sub><sup>2-</sup> or PO<sub>4</sub><sup>3-</sup> ions.
+      </p>
+      <div style="color: #464EB8"><h2><i>Confirmatory Tests</i></h2></div>
+        <a href="/Referlab/anion/So4" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 250px"><span>Confirmatory Test for SO<sub>4</sub><sup>2-</sup></span></button></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/Referlab/anion/Po4" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 250px"><span>Confirmatory Test for PO<sub>4</sub><sup>3-</sup></span></button></a>
+
+  </div>
+  </div>
+{% endblock %}

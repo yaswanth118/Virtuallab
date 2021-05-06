@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <link rel="stylesheet" href="{{ url_for('static',filename='anions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='CSS1.css') }}">
+    <div class="jumbotron" id ="Welcome" style="opacity : 0.9;width: 100%">
+    <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px">
+    <div class="container">
+        <div class="images">
+            <div class="image-gif">
+                <img src="{{ url_for('static',filename='Zns_start.gif')}}" width="400px" height="210px" id="giffy" >
+            </div>
+            <br><br><br><br><br><br>
+            <div class="results-of-reaction">
+                <div class="reaction">
+                    <div style="color: #464EB8"><h4><i>Salt before reaction</i></h4></div>
+                    <img src="{{ url_for('static',filename='Znsbefore.jpg')}}" style="width:100%" id="before">
+                </div>
+                <div class="reaction" id="bluff">
+                    <div style="color: #464EB8"><h4><i>Salt after reaction</i></h4></div>
+                    <img src="{{ url_for('static',filename='after.png')}}" style="width:100%;float: right" id="after">
+                </div>
+            </div>
+        </div>
+        <div class="icons">
+            <div class="cursor" id="group-3">
+                <img class="circular-icons" src="{{ url_for('static',filename='icon_1.jpeg')}}"  width="150px" height="150px" onclick="open1()">
+            </div>
+            <div class="cursor" id="group-0">
+                <img class="circular-icons" src="{{ url_for('static',filename='icon_2.jpeg')}}" width="150px" height="150px" onclick="open2()">
+            </div>
+            <div class="cursor" id="group-2">
+                <img class="circular-icons" src="{{ url_for('static',filename='icon_3.jpeg')}}" width="150px" height="150px" onclick="open3()">
+            </div>
+             <div class="cursor" id="group-5">
+                <img class="circular-icons" src="{{ url_for('static',filename='icon_4.jpeg')}}" width="150px" height="150px" onclick="open4()">
+            </div>
+            <div class="cursor" id="group-4">
+                <img class="circular-icons" src="{{ url_for('static',filename='icon_5.jpeg')}}" width="150px" height="150px" onclick="open5()">
+            </div>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <h2 style="color: #464EB8" id="data">Reaction</h2>
+        <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"><p>
+        <div style="padding-left: 70%">
+        <a href="/Quiz_Zn"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Quiz</span></button></a>
+        </div>
+        <script src="{{url_for('static',filename='Zn.js')}}"></script>
+    </div></div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 0.1 g of salt in a test tube, add a pinch of manganese dioxide and 3-4 drops of conc. sulphuric acid. Heat the reaction mixture. Greenish yellow chlorine gas is evolved which is detected by its pungent odour and bleaching action.
+          Take 1 mL of sodium carbonate extract in a test tube, acidfy it with dil. HNO<sub>3</sub> or take water extract and add silver nitrate solution. A curdy white precipitate is obtained which is soluble in ammonium hydroxide solution.
+          Take 0.1 g salt and a pinch of solid potassium dichromate in a test tube, add conc. H <sub>2</sub> SO <sub>4</sub> , heat and pass the gas evolved through sodium hydroxide solution. It becomes yellow. Divide the solution into two parts. Acidify one part with acetic acid
+          and add lead acetate solution. A yellow precipitate is formed. Acidify the second part with dilute sulphuric acid and add 1 mL of amyl alcohol followed by 1 mL of 10% hydrogen peroxide. After gentle shake it.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <p>The organic layer turns blue.</p>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Is the Inference observed?</h2>
+          <br>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: green" onclick="P1()"><span>Yes</span></button>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: red" onclick="P2()"><span>No</span></button>
+          <br><br><br>
+          <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"></p>
+          <script>
+                a=document.getElementById("para");
+                a.style.display="none";
+                function P1(){
+                    a.style.display="block";
+                    a.style.border="5px solid green";
+                    a.innerHTML="<b>Cl<sup>-</sup> + H<sub>2</sub>SO<sub>4</sub> &#8594; HSO<sub>4</sub><sup>-</sup> + HCl</b><br><br>" +
+                        "The HCl formed reacts with NH<sub>3</sub> as follows<br><br>" +
+                        "<b>HCl + NH<sub>3</sub> &#8594; NH<sub>4</sub>Cl</b> <br><br>" +
+                        "The organic layer turns blue." + "It is confirmed that the anion is Cl<sup>-</sup>.";
+                }
+                function P2(){
+                    a.style.display="block";
+                    a.style.border="5px solid red";
+                    a.innerHTML="Sorry! we can't find the anion in the salt.";
+                }
+          </script>
+{#        <div style="padding-left: 70%" id ="blk1">#}
+{#        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>#}
+{#        </div>#}
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/salt" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to home</span></button></a>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+{% endblock %}

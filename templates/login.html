@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <style>
+    body{
+        background-color: #464EB8;
+    }
+    </style>
+    <div style="color: black;padding-left: 15%"><h1>Login</h1></div>
+    <div style="padding-right: 60%">
+    <div class="jumbotron" id ="Welcome" style="opacity : 0.9;">
+    <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+  <form action="" method="POST">
+    <div class="form-group">
+      <label><div style="color: black"><h4><b>Username</b></h4></div></label>
+      <input type="text" name="username" class="form-control" style="height: 40px" value={{request.form.username}}>
+    </div>
+    <div class="form-group">
+      <label><div style="color: black"><h4><b>Password</b></h4></div></label>
+      <input type="password" name="password" class="form-control" style="height: 40px" value={{request.form.password}}>
+    </div>
+      <p><small><small>Not Registered Yet? <a href="/register">Register Here</a></small></small></p>
+    <button type="submit" class="button2">Submit</button>
+  </form>
+    </div>
+    </div>
+    </div>
+{% endblock %}

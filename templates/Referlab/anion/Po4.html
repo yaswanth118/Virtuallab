@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Acidify sodium carbonate extract or the solution of the salt in water with conc. HNO<sub>3</sub> and add ammonium molybdate solution and heat to boiling.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <p>A canary yellow precipitate is formed.</p>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Is the Inference observed?</h2>
+          <br>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: green" onclick="P1()"><span>Yes</span></button>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: red" onclick="P2()"><span>No</span></button>
+          <br><br><br>
+          <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"></p>
+          <script>
+                a=document.getElementById("para");
+                a.style.display="none";
+                function P1(){
+                    a.style.display="block";
+                    a.style.border="5px solid green";
+                    a.innerHTML="<b>12(NH<sub>4</sub>)<sub>2</sub>MoO<sub>4</sub> + H<sub>3</sub>PO<sub>4</sub> + 21 HNO<sub>3</sub> → (NH<sub>4</sub>)<sub>3</sub>PMo<sub>12</sub>O<sub>40</sub>↓ + 21 NH<sub>4</sub>NO<sub>3</sub> + 12 H<sub>2</sub>O</b><br><br>" +
+                        "The phosphomolybdate ion formed is a canary yellow precipitate. It confirms that the anion is PO<sub>4</sub><sup>3-</sup>.";
+                }
+                function P2(){
+                    a.style.display="block";
+                    a.style.border="5px solid red";
+                    a.innerHTML="Sorry! we can't find the anion in the salt.";
+                }
+          </script>
+{#        <div style="padding-left: 70%" id ="blk1">#}
+{#        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>#}
+{#        </div>#}
+          <hr style="height: 5px;border-width:0;color:#464EB8;background-color:#464EB8">
+          <a href="/Referlab/anion/step3" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go Back</span></button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/Referlab/salt" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to home</span></button></a>
+
+
+      </div>
+
+  </div>
+  </div>
+{% endblock %}

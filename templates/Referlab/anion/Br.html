@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 0.1 g of salt and a pinch of MnO<sub>2</sub> in a test tube. Add 3-4 drops conc.sulphuric acid and heat. Intense brown fumes are evolved.
+Neutralise 1 mL of sodium carbonate extract with hydrochloric acid (or take the water extract). Add 1 mL carbon tetrachloride (CCl<sub>4</sub>)/chloroform (CHCl<sub>3</sub>)/ carbon disulphide. Now add an excess of chlorine water drop wise and shake the test tube. A brown colouration in the organic layer confirms the presence of bromide ion.
+          Acidify 1 mL of sodium carbonate extract with dil. HNO<sub>3</sub> (or take 1 mL water extract) and add silver nitrate solution.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <p>A pale yellow precipitate soluble with difficulty in ammonium hydroxide solution is obtained.</p>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Is the Inference observed?</h2>
+          <br>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: green" onclick="P1()"><span>Yes</span></button>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: red" onclick="P2()"><span>No</span></button>
+          <br><br><br>
+          <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"></p>
+          <script>
+                a=document.getElementById("para");
+                a.style.display="none";
+                function P1(){
+                    a.style.display="block";
+                    a.style.border="5px solid green";
+                    a.innerHTML="<b>2NaBr + 2H<sub>2</sub>SO<sub>4</sub> &#8594; Br<sub>2</sub> + SO<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O</b><br><br>" +
+                    "<b>2NaBr + MnO<sub>2</sub> + 2H<sub>2</sub>SO<sub>4</sub> &#8594; Na<sub>2</sub>SO<sub>4</sub> + MnSO<sub>4</sub> + 2H<sub>2</sub>O + Br<sub>2</sub></b><br><br>" +"The pale yellow precipitate confirms that the anion is Br<sup>-</sup>.";
+                }
+                function P2(){
+                    a.style.display="block";
+                    a.style.border="5px solid red";
+                    a.innerHTML="Sorry! we can't find the anion in the salt.";
+                }
+          </script>
+{#        <div style="padding-left: 70%" id ="blk1">#}
+{#        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>#}
+{#        </div>#}
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/salt" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to home</span></button></a>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block head %}
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">#}
+
+{% endblock %}
+{% block body %}
+  <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+      <div style="color: #464EB8"><h2><i>Reaction</i></h2></div>
+      <p>
+          Take 0.1 g of salt in a china dish. Add 1 mL of ethanol and 0.2 mL conc. H<sub>2</sub>SO<sub>4</sub> and heat. Fruity odour confirms the presence of acetate ion.
+Take 0.1 g of salt in a test tube, add 1-2 mL distilled water, shake well filter if necessary. Add 1 to 2 mL neutral ferric chloride solution to the filtrate.
+      </p>
+      <div style="color: #464EB8"><h2><i>Inference Observed</i></h2></div>
+      <p>Deep red colour appears which disappears on boiling and a brown-red precipitate is formed.</p>
+      <div id = "clear">
+      <h2 style="color: #464EB8" id="data">Is the Inference observed?</h2>
+          <br>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: green" onclick="P1()"><span>Yes</span></button>
+          <button class="button2" style="font-size: 15px;padding: 12px;width: 100px;background-color: red" onclick="P2()"><span>No</span></button>
+          <br><br><br>
+          <p style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px" id="para"></p>
+          <script>
+                a=document.getElementById("para");
+                a.style.display="none";
+                function P1(){
+                    a.style.display="block";
+                    a.style.border="5px solid green";
+                    a.innerHTML="<b>6CH<sub>3</sub>COO<sup>-</sup> + 3FeCl<sub>3</sub> + 2H<sub>2</sub>O &#8594; [Fe<sub>3</sub>(OH)<sub>2</sub>(CH<sub>3</sub>COO)<sub>6</sub>]Cl + 2HCl</b><br><br>"+
+                        "The complex compound formed is a reddish brown precipitate. This confirms that the anion is CH<sub>3</sub>COO<sup>-</sup>.";
+                }
+                function P2(){
+                    a.style.display="block";
+                    a.style.border="5px solid red";
+                    a.innerHTML="Sorry! we can't find the anion in the salt.";
+                }
+          </script>
+{#        <div style="padding-left: 70%" id ="blk1">#}
+{#        <a href="/Referlab/anion/step2" id="blk11"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to Confirmatory Test</span></button></a>#}
+{#        </div>#}
+          <div style="padding-left: 70%" id ="blk2">
+        <a href="/Referlab/salt" id="blk21"><button class="button2" style="font-size: 15px;padding: 12px;width: 200px"><span>Go to home</span></button></a>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+{% endblock %}

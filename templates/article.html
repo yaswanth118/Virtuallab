@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div style="color: #464EB8"><h1><i>{{article.title}}</i></h1></div>
+    <div class="jumbotron" id ="Welcome" style="opacity : 0.9">
+    <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px">
+        <div style="color: black"><h2><b>Notes number: {{ article.id }}</b></h2></div>
+  <hr style="height: 5px;border-width:0;color:#464EB8;background-color:#464EB8"><br>
+
+  <div style="color: black">
+    {{article.body | safe}}
+  </div>
+    </div>
+    </div>
+{% endblock %}
