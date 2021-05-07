@@ -16,10 +16,10 @@ function open1(){
          z.style.display="block"
     a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/Noreaction.gif'
+         y.src='/static/ConfCO3.gif'
 
          var aft=document.getElementById("after");
-         aft.src='/static/Noreaction.jpg'
+         aft.src='/static/ConfCO3after.jpg'
 }
 function open2(){
          x.innerHTML="The salt doesn't react with Sodium nitroprusside."
