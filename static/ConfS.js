@@ -30,7 +30,7 @@ function open2(){
          y.src='/static/Noreaction.gif'
 
          var aft=document.getElementById("after");
-         aft.src='/static/Noreaction.jpg'
+         aft.src='/static/ConfSafter.jpg'
 }
 function open3(){
          x.innerHTML= "The salt doesn't react with silver nitrate (AgNO<sub>3</sub>)."
