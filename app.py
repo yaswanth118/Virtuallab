@@ -8,9 +8,9 @@ app = Flask(__name__)
 
 
 app.config['MYSQL_HOST'] = 'remotemysql.com'
-app.config['MYSQL_USER'] = 'ipNavuPbEd'
-app.config['MYSQL_PASSWORD'] = 'T3LSjcw7gs'
-app.config['MYSQL_DB'] = 'ipNavuPbEd'
+app.config['MYSQL_USER'] = 'nU0amtc0De'
+app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
+app.config['MYSQL_DB'] = 'nU0amtc0De'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
