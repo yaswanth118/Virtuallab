@@ -7,12 +7,11 @@ from functools import wraps
 app = Flask(__name__)
 
 
-app.config['MYSQL_HOST'] = 'sql6.freesqldatabase.com'
-app.config['MYSQL_USER'] = 'sql6410823'
-app.config['MYSQL_PASSWORD'] = 'DpxFuhyNyH'
-app.config['MYSQL_DB'] = 'sql6410823'
+app.config['MYSQL_HOST'] = 'http://sql6.freesqldatabase.com/'
+app.config['MYSQL_USER'] = 'sql6410732'
+app.config['MYSQL_PASSWORD'] = 'trV4Z14Q3Q'
+app.config['MYSQL_DB'] = 'sql6410732'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-app.config['MYSQL_PORT'] = '3306'
 mysql = MySQL(app)
 
 #--------------------------------------------------------------------#
@@ -496,5 +495,5 @@ def delete_article(id):
 
 if __name__ == '__main__':
     app.secret_key='secret123'
-    app.run(Debug=True)
+    app.run()
 
