@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: gunicorn wsgi:Virtual labs/app.py
