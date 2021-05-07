@@ -52,5 +52,16 @@ function open4(){
          y.src='/static/Noreaction.gif'
 
          var aft=document.getElementById("after");
+         aft.src='/static/ConfNO3after.jpg'
+}
+function open5(){
+         x.innerHTML="The salt doesn't react with Lead acetate."
+         x.style.display="block"
+         z.style.display="block"
+    a.style.display="block"
+    var y=document.getElementById("giffy");
+         y.src='/static/Noreaction.gif'
+
+         var aft=document.getElementById("after");
          aft.src='/static/Noreaction.jpg'
 }

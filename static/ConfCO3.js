@@ -44,6 +44,17 @@ function open3(){
          aft.src='/static/Noreaction.jpg'
 }
 function open4(){
+         x.innerHTML="The salt doesn't react with Lead acetate."
+         x.style.display="block"
+         z.style.display="block"
+    a.style.display="block"
+    var y=document.getElementById("giffy");
+         y.src='/static/Noreaction.gif'
+
+         var aft=document.getElementById("after");
+         aft.src='/static/Noreaction.jpg'
+}
+function open5(){
          x.innerHTML="The salt doesn't react with iron (II) sulphate to form a brown ring."
          x.style.display="block"
          z.style.display="block"

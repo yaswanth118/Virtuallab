@@ -11,7 +11,7 @@ document.getElementById("nitroprusside").style.cursor="pointer"
 document.getElementById("silvernitrate").style.cursor="pointer"
 document.getElementById("brown-ring").style.cursor="pointer"
 function open1(){
-         x.innerHTML="When 0.1 g of the salt is taken in a test tube and 1-2 mL of dilute Sulphuric acid is added, a colourless, odourless gas is evolved with brisk effervescence, which turns lime water milky. On passing the gas for some more time, milkiness disappears."
+         x.innerHTML="No reaction with dilute H<sub>2</sub>SO<sub>4</sub>."
          x.style.display="block"
          z.style.display="block"
     a.style.display="block"
@@ -53,4 +53,17 @@ function open4(){
 
          var aft=document.getElementById("after");
          aft.src='/static/Noreaction.jpg'
+}
+function open5(){
+         x.innerHTML="Acidification the aqueous solution or sodium carbonate" +
+             "and extractin with acetic acid and adding lead acetate solution." +
+             "gives a white precipitate "
+         x.style.display="block"
+         z.style.display="block"
+    a.style.display="block"
+    var y=document.getElementById("giffy");
+         y.src='/static/So43after.gif'
+
+         var aft=document.getElementById("after");
+         aft.src='/static/Confso3after.jpg'
 }

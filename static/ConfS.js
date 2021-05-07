@@ -19,7 +19,7 @@ function open1(){
          y.src='/static/Noreaction.gif'
 
          var aft=document.getElementById("after");
-         aft.src='/static/Noreaction.jpg'
+         aft.src='/static/Safter.jpg'
 }
 function open2(){
          x.innerHTML="Take 1 mL of water extract and make it alkaline by adding ammonium hydroxide or sodium carbonate extract. Add a drop of sodium nitroprusside solution. Purple or violet colouration appears."
@@ -45,6 +45,17 @@ function open3(){
 }
 function open4(){
          x.innerHTML="The salt doesn't react with iron (II) sulphate to form a brown ring."
+         x.style.display="block"
+         z.style.display="block"
+    a.style.display="block"
+    var y=document.getElementById("giffy");
+         y.src='/static/Noreaction.gif'
+
+         var aft=document.getElementById("after");
+         aft.src='/static/Noreaction.jpg'
+}
+function open5(){
+         x.innerHTML="The salt doesn't react with Lead acetate."
          x.style.display="block"
          z.style.display="block"
     a.style.display="block"
