@@ -41,13 +41,17 @@
       <div id = "out">
       <h2 style="color: #464EB8" id = "head">Details</h2>
         <p style="border: 5px solid green;border-radius: 15px;padding: 40px" id="text">Aqueous solution or sodium carbonate extract of the salt acidified with acetic acid on addition of barium chloride gives a white precipitate of
-barium sulphate insoluble in conc. HCl or conc. HNO3.
+            barium sulphate insoluble in conc. HCl or conc. HNO3.
             Na2SO4 + BaCl2 → BaSO4 + 2NaCl
             On treating sulphate with warm dil.
             H<sub>2</sub>SO<sub>4</sub>, SO<sub>2</sub> gas is evolved which is suffocating with the smell of burning sulphur.<br><br>
             <b>Na<sub>2</sub>SO<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub> → Na<sub>2</sub>SO<sub>4</sub> + H<sub>2</sub>O + SO<sub>2</sub><br><br></b>
             The gas turns potassium dichromate paper acidified with dil. H<sub>2</sub>SO<sub>4</sub>, green.<br><br>
             <b>K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> + H<sub>2</sub>SO<sub>4</sub> + 3SO<sub>2</sub> → K<sub>2</sub>SO<sub>4</sub> + Cr<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> + H<sub>2</sub>O</b><br><br>
+            Sulphate  ions give white precipitate of lead sulphate when aqueous
+            solution or sodium carbonate extract neutralised with acetic acid is
+            treated with lead acetate solution.<br><br>
+            <b>Na<sub>2</sub>SO<sub>4</sub>  + (CH<sub>3</sub>COO)<sub>2</sub>Pb → PbSO<sub>4</sub>  + 2CH<sub>3</sub>COONa</b>
         </p>
 
         <div style="padding-left: 70%" id ="in">
@@ -69,14 +73,10 @@ barium sulphate insoluble in conc. HCl or conc. HNO3.
       HEAD.style.display = "none";
       IN = document.getElementById("in");
       IN.style.display = "none";
-     
-      for (var i=1;i<=5;i++)
-      {
+      for (var i=1;i<=5;i++) {
          document.getElementById("p"+i.toString()).style.display="none";
       }
-      
-      function exec2(id)
-      {
+      function exec2(id) {
           OUT.style.display = "block";
           TEXT.style.display = "block";
           HEAD.style.display = "block";
@@ -89,8 +89,7 @@ barium sulphate insoluble in conc. HCl or conc. HNO3.
           document.getElementById("p"+id.toString()).style.display="inline";
       }
       
-      function exec1(id)
-      {
+      function exec1(id) {
           OUT.style.display = "block";
           TEXT.style.display = "block";
           HEAD.style.display = "block";
