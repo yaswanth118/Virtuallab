@@ -6,10 +6,10 @@ from functools import wraps
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'yaswanth2001'
-app.config['MYSQL_DB'] = 'virtuallab'
+app.config['MYSQL_HOST'] = 'remotemysql.com'
+app.config['MYSQL_USER'] = 'nU0amtc0De'
+app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
+app.config['MYSQL_DB'] = 'nU0amtc0De'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # app.config['MYSQL_HOST'] = 'remotemysql.com'
 # app.config['MYSQL_USER'] = 'nU0amtc0De'
