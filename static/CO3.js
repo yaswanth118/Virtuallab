@@ -16,7 +16,7 @@ function open1(){
          z.style.display="block"
          a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/CuCO31.gif'
+         y.src='/static/CO3gif.gif'
          var aft=document.getElementById("after");
          aft.src='/static/CO3after.jpg'
 }

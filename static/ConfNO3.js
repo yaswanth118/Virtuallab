@@ -49,7 +49,7 @@ function open4(){
          z.style.display="block"
     a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/Noreaction.gif'
+         y.src='/static/ConfNO3gif.gif'
 
          var aft=document.getElementById("after");
          aft.src='/static/ConfNO3after.jpg'

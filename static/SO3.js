@@ -28,7 +28,7 @@ function open2(){
          z.style.display="block"
     a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/Noreaction.gif'
+         y.src='/static/SO3gif.gif'
 
          var aft=document.getElementById("after");
          aft.src='/static/So43after.jpg'

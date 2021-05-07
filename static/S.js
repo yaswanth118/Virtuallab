@@ -16,7 +16,7 @@ function open1(){
          z.style.display="block"
     a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/Noreaction.gif'
+         y.src='/static/Sgif.gif'
 
          var aft=document.getElementById("after");
          aft.src='/static/Safter.jpg'

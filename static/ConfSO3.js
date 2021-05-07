@@ -62,7 +62,7 @@ function open5(){
          z.style.display="block"
     a.style.display="block"
     var y=document.getElementById("giffy");
-         y.src='/static/So43after.gif'
+         y.src='/static/ConfSO3gif.gif'
 
          var aft=document.getElementById("after");
          aft.src='/static/Confso3after.jpg'

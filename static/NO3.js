@@ -38,7 +38,7 @@ function open3(){
          z.style.display="block"
     a.style.display="block"
          var y=document.getElementById("giffy");
-         y.src='/static/Noreaction.gif'
+         y.src='/static/NO3gif.gif'
 
          var aft=document.getElementById("after");
          aft.src='/static/no3after.jpg'
