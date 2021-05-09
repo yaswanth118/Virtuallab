@@ -1,5 +1,10 @@
 {% extends 'layout.html' %}
 {% block body %}
+    <style>
+    .circular-icons {
+    border-radius: 50%;
+}
+    </style>
     <div style="color: #464EB8"><h1><i>About Us</i></h1></div>
     <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
   <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px"><h4 style="color: black">This Virtual Labs application is developed and designed by<br>
@@ -11,6 +16,8 @@
          <li><b>MATTAPATRI SIMHADRI KRISHNA PAVAN KUMAR<br><br></b></li>
          <li><B>RAMBHA KRANTHI<br><br></B></li>
      </ol>
-      as a part of semester project of the course CSN-254.</h4></div></div>
+      as a part of semester project of the course CSN-254.</h4>
     <img class="circular-icons" src="{{ url_for('static',filename='cv_website.jpg')}}"  width="150px" height="150px" >
+  </div></div>
+
 {% endblock %}
