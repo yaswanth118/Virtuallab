@@ -6,16 +6,16 @@ from functools import wraps
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'remotemysql.com'
-app.config['MYSQL_USER'] = 'nU0amtc0De'
-app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
-app.config['MYSQL_DB'] = 'nU0amtc0De'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # app.config['MYSQL_HOST'] = 'remotemysql.com'
 # app.config['MYSQL_USER'] = 'nU0amtc0De'
 # app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
 # app.config['MYSQL_DB'] = 'nU0amtc0De'
 # app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'yaswanth2001'
+app.config['MYSQL_DB'] = 'virtuallab'
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
 #--------------------------------------------------------------------#
@@ -287,9 +287,9 @@ def article(id):
 
 # Register Form Class
 class RegisterForm(Form):
-    name = StringField('Name', [validators.Length(min=1, max=50)])
-    username = StringField('Username', [validators.Length(min=4, max=25)])
-    email = StringField('Email', [validators.Length(min=6, max=50)])
+    name = StringField('Name', [validators.DataRequired(),validators.Length(min=1, max=50)])
+    username = StringField('Username', [validators.DataRequired(),validators.Length(min=4, max=25)])
+    email = StringField('Email', [validators.DataRequired(),validators.Length(min=6, max=50),validators.Email()])
     password = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords do not match')
@@ -498,8 +498,9 @@ def delete_article(id):
     return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
+    app.secret_key = 'secret123'
     app.run()
-app.secret_key = 'secret123'
+
 
 
 
