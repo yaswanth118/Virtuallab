@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+  <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+        <div style="color: #464EB8"><h2><i>Group separation table</i></h2></div>
+        <img src="{{url_for( 'static',filename='table.jpg' )}}">
+      <br><br><br><br>
+      <p><B>We need to prepare the sodium extract first by the following steps:</B></p>
+      <ol style="font-size: 20px">
+          <li>Take a small piece of dry sodium in a fusion tube.</li>
+          <br>
+          <li>Heat the tube slightly on a Bunsen burner so that the sodium melts to a shining globule.</li>
+          <br>
+          <li>Add a pinch of the organic compound.</li>
+          <br>
+          <li>Heat it slowly to start with so that the compound reacts with sodium metal.</li>
+      </ol>
+      <br>
+    <p>The prepared Sodium Extract will be used for the detection of cations in the further steps.</p>
+      <br>
+      <a href="/Referlab/cation/step1" style="padding-left: 70%">
+      <button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+              <span > Proceed </span>
+            </button>
+          </a>
+  </div></div>
+
+
+{% endblock %}

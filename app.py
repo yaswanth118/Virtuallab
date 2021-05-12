@@ -189,6 +189,9 @@ def Cu():
     return render_template('Cu.html')
 #--------------------------------------------------------------------#
 
+@app.route('/Referlab/cation/Cation')
+def s0():
+    return render_template('Referlab/cation/Cation.html')
 
 @app.route('/Referlab/cation/step1')
 def s1():
