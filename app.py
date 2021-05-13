@@ -1,10 +1,24 @@
+import wtforms
 from flask import Flask, render_template, flash, redirect, url_for, session, request, logging
 from flask_mysqldb import MySQL
-from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+from wtforms import Form, StringField, TextAreaField, PasswordField, validators, StringField, SubmitField,BooleanField
+from flask_wtf import FlaskForm
 from passlib.hash import sha256_crypt
 from functools import wraps
+from flask_mail import Mail,Message
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+
 
 app = Flask(__name__)
+app.config.update(
+	MAIL_SERVER='smtp.gmail.com',
+	MAIL_PORT=465,
+	MAIL_USE_SSL=True,
+	MAIL_USERNAME = 'Virtual.labs118@gmail.com',
+	MAIL_PASSWORD = 'Virtual@lab'
+	)
+mail = Mail(app)
+
 
 app.config['MYSQL_HOST'] = 'remotemysql.com'
 app.config['MYSQL_USER'] = 'nU0amtc0De'
@@ -252,7 +266,96 @@ def p5():
 @app.route('/about')
 def about():
     return render_template('about.html')
+#-----------------------------------------------------------------------------------------------------------------#
+class RequestResetForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[validators.DataRequired(), validators.Email()])
+    submit = SubmitField('Request Password Reset')
 
+def validate_email(self, email):
+    # user = User.query.filter_by(email=email.data).first()
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM users WHERE email = %s", [email.data])
+    user=cur.fetchall();
+    if user is None:
+        raise ValidationError('There is no account with that email. You must register first.')
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password', validators=[validators.DataRequired()])
+    confirm_password = PasswordField('Confirm Password',
+                                     validators=[validators.DataRequired(), validators.EqualTo('password')])
+    submit = SubmitField('Reset Password')
+
+def get_reset_token(a, expires_sec=1800):
+    s = Serializer(app.config['SECRET_KEY'], expires_sec)
+    return s.dumps({'user_id': a}).decode('utf-8')
+
+#@staticmethod
+def verify_reset_token(token):
+    s = Serializer(app.config['SECRET_KEY'])
+    try:
+        user_id = s.loads(token)['user_id']
+    except:
+        return None
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM users WHERE username = %s", [user_id])
+    return cur.fetchone();
+
+
+
+#-----------------------------------------------------------------------------------------------------------------#
+def send_reset_email(user):
+    token = get_reset_token(user['username'])
+    msg = Message('Password Reset Request',
+                  sender='project.vijayawada@gmail.com',
+                  recipients=[user['email']])
+    msg.body = f'''To reset your password, visit the following link:
+    
+    
+            "{url_for('reset_token', token=token, _external=True)}"
+
+
+If you did not make this request then simply ignore this email and no changes will be made.
+'''
+    mail.send(msg)
+
+
+@app.route("/reset_password", methods=['GET', 'POST'])
+def reset_request():
+    # if current_user.is_authenticated:
+    #     return redirect(url_for('home'))
+    form = RequestResetForm()
+    if form.validate_on_submit():
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT * FROM users WHERE email = %s", [form.email.data])
+        user = cur.fetchone()
+        # print(user,user['username'],type(user));
+        # return 0;
+        # user = User.query.filter_by(email=form.email.data).first()
+        send_reset_email(user)
+        flash('An email has been sent with instructions to reset your password.', 'info')
+        return redirect(url_for('login'))
+    return render_template('reset_request.html', title='Reset Password', form=form)
+
+
+@app.route("/reset_password/<token>", methods=['GET', 'POST'])
+def reset_token(token):
+    user = verify_reset_token(token)
+    if user is None:
+        flash('That is an invalid or expired token', 'warning')
+        return redirect(url_for('reset_request'))
+    form = ResetPasswordForm()
+    if form.validate_on_submit():
+        password = sha256_crypt.encrypt(str(form.password.data))
+        cur =mysql.connection.cursor();
+        cur.execute("UPDATE users SET password=%s WHERE username=%s",[sha256_crypt.encrypt(str(form.password.data)),user['username']])
+        cur.execute("SELECT * FROM users WHERE username = %s", [user['username']])
+        mysql.connection.commit()
+        cur.close();
+        flash('Your password has been updated! You are now able to log in', 'success')
+        return redirect(url_for('login'))
+    return render_template('reset_token.html', title='Reset Password', form=form)
+#-----------------------------------------------------------------------------------------------------------------#
 
 # Articles
 @app.route('/articles')
@@ -262,9 +365,7 @@ def articles():
 
     # Get articles
     result =cur.execute("SELECT * FROM articles WHERE author = %s", [session['username']])
-
     articles = cur.fetchall()
-
     if result > 0:
         return render_template('articles.html', articles=articles)
     else:
@@ -342,7 +443,6 @@ def login():
 
         # Get user by username
         result = cur.execute("SELECT * FROM users WHERE username = %s", [username])
-
         if result > 0:
             # Get stored hash
             data = cur.fetchone()
@@ -504,6 +604,7 @@ def delete_article(id):
 if __name__ == '__main__':
     app.run()
 app.secret_key = 'secret123'
+
 
 
 
