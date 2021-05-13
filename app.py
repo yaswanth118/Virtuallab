@@ -10,16 +10,17 @@ from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 
 app = Flask(__name__)
+
+# This server configuration is used for sending the Gmail and the mail-id, Password are mentioned for that mail-id.
 app.config.update(
 	MAIL_SERVER='smtp.gmail.com',
 	MAIL_PORT=465,
 	MAIL_USE_SSL=True,
 	MAIL_USERNAME = 'Virtual.labs118@gmail.com',
-	MAIL_PASSWORD = 'Virtual@lab'
-	)
+	MAIL_PASSWORD = 'Virtual@lab')
 mail = Mail(app)
 
-
+# Connecting with MySQL database.
 app.config['MYSQL_HOST'] = 'remotemysql.com'
 app.config['MYSQL_USER'] = 'nU0amtc0De'
 app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
@@ -33,7 +34,9 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
-#--------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------#
+# These HTML pages are the Quizzing section of Start Test.
+# Cations
 @app.route('/Quiz_Cu')
 def Quiz_Cu():
     return render_template('/Quiz_Cu.html')
@@ -53,7 +56,9 @@ def Quiz_NH4():
 @app.route('/Quiz_Zn')
 def Quiz_Zn():
     return render_template('/Quiz_Zn.html')
-#--------------------------------------------------------------------#
+
+# Anions
+
 @app.route('/Quiz_CO3')
 def Quiz_CO3():
     return render_template('/Quiz_CO3.html')
@@ -74,8 +79,10 @@ def Quiz_NO3():
 def Quiz_Cl():
     return render_template('/Quiz_Cl.html')
 
+#------------------------------------------------------------------------------------------------------------#
+# These are the HTML pages of Lab Assistant part.
 
-#--------------------------------------------------------------------#
+# Anion Lab Assistant.
 @app.route('/Referlab/salt')
 def salt():
     return render_template('Referlab/Salt.html')
@@ -139,8 +146,43 @@ def anionSo4():
 @app.route('/Referlab/anion/Po4')
 def anionPo4():
     return render_template('Referlab/anion/Po4.html')
-#--------------------------------------------------------------------#
 
+# Cations Lab Assistant.
+
+@app.route('/Referlab/cation/Cation')
+def s0():
+    return render_template('Referlab/cation/Cation.html')
+
+@app.route('/Referlab/cation/step1')
+def s1():
+    return render_template('Referlab/cation/c_step1.html')
+
+@app.route('/Referlab/cation/step2')
+def s2():
+    return render_template('Referlab/cation/c_step2.html')
+
+@app.route('/Referlab/cation/step3')
+def s3():
+    return render_template('Referlab/cation/c_step3.html')
+
+@app.route('/Referlab/cation/step4')
+def s4():
+    return render_template('Referlab/cation/c_step4.html')
+
+@app.route('/Referlab/cation/step5')
+def s5():
+    return render_template('Referlab/cation/c_step5.html')
+
+@app.route('/Referlab/cation/step6')
+def s6():
+    return render_template('Referlab/cation/c_step6.html')
+
+@app.route('/Referlab/cation/step7')
+def s7():
+    return render_template('Referlab/cation/c_step7.html')
+
+#------------------------------------------------------------------------------------------------------------#
+# Anion Start Test HTML pages.
 @app.route('/NO3')
 def NO3():
     return render_template('NO3.html')
@@ -181,7 +223,9 @@ def Cl():
 def ConfCl():
     return render_template('ConfCl.html')
 
-#--------------------------------------------------------------------#
+#------------------------------------------------------------------------------------------------------------#
+
+# Cations Start Test HTML Pages.
 @app.route('/Fe')
 def Fe():
     return render_template('Fe.html')
@@ -201,41 +245,10 @@ def Ba():
 @app.route('/Cu')
 def Cu():
     return render_template('Cu.html')
-#--------------------------------------------------------------------#
 
-@app.route('/Referlab/cation/Cation')
-def s0():
-    return render_template('Referlab/cation/Cation.html')
+#------------------------------------------------------------------------------------------------------------#
 
-@app.route('/Referlab/cation/step1')
-def s1():
-    return render_template('Referlab/cation/c_step1.html')
-
-@app.route('/Referlab/cation/step2')
-def s2():
-    return render_template('Referlab/cation/c_step2.html')
-
-@app.route('/Referlab/cation/step3')
-def s3():
-    return render_template('Referlab/cation/c_step3.html')
-
-@app.route('/Referlab/cation/step4')
-def s4():
-    return render_template('Referlab/cation/c_step4.html')
-
-@app.route('/Referlab/cation/step5')
-def s5():
-    return render_template('Referlab/cation/c_step5.html')
-
-@app.route('/Referlab/cation/step6')
-def s6():
-    return render_template('Referlab/cation/c_step6.html')
-
-@app.route('/Referlab/cation/step7')
-def s7():
-    return render_template('Referlab/cation/c_step7.html')
-
-# Index
+# Home Page
 @app.route('/')
 def index():
     return render_template('home.html')
@@ -262,7 +275,7 @@ def p5():
     return render_template('Fe2SO43.html')
 
 
-# About
+# About Us
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -290,7 +303,6 @@ def get_reset_token(a, expires_sec=1800):
     s = Serializer(app.config['SECRET_KEY'], expires_sec)
     return s.dumps({'user_id': a}).decode('utf-8')
 
-#@staticmethod
 def verify_reset_token(token):
     s = Serializer(app.config['SECRET_KEY'])
     try:
@@ -319,20 +331,18 @@ If you did not make this request then simply ignore this email and no changes wi
 '''
     mail.send(msg)
 
-
 @app.route("/reset_password", methods=['GET', 'POST'])
 def reset_request():
-    # if current_user.is_authenticated:
-    #     return redirect(url_for('home'))
     form = RequestResetForm()
     if form.validate_on_submit():
         cur = mysql.connection.cursor()
         cur.execute("SELECT * FROM users WHERE email = %s", [form.email.data])
         user = cur.fetchone()
-        # print(user,user['username'],type(user));
-        # return 0;
-        # user = User.query.filter_by(email=form.email.data).first()
-        send_reset_email(user)
+        try:
+            send_reset_email(user)
+        except:
+            flash('This email is not registerd!','warning')
+            return render_template('reset_request.html', title='Reset Password', form=form)
         flash('An email has been sent with instructions to reset your password.', 'info')
         return redirect(url_for('login'))
     return render_template('reset_request.html', title='Reset Password', form=form)
@@ -355,6 +365,7 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
+
 #-----------------------------------------------------------------------------------------------------------------#
 
 # Articles
@@ -376,7 +387,7 @@ def articles():
     cur.close()
 
 
-#Single Article
+# Single Article
 @app.route('/article/<string:id>/')
 def article(id):
     # Create cursor
@@ -384,9 +395,7 @@ def article(id):
 
     # Get article
     result = cur.execute("SELECT * FROM articles WHERE id = %s", [id])
-
     article = cur.fetchone()
-
     return render_template('article.html', article=article)
 
 
@@ -604,6 +613,7 @@ def delete_article(id):
 if __name__ == '__main__':
     app.run()
 app.secret_key = 'secret123'
+
 
 
 
