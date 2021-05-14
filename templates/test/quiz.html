@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{#<h id = 'p1' style="display: none"> &#9989</h> Correct#}
+{#<h id = 'p2' style="display: none">  &#10060</h> Wrong#}
+{% block body %}
+    <div class="jumbotron " id ="Welcome" style="opacity : 0.9">
+        <div style="border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+        <ol>
+            {% for question in questions %}
+                <style>
+                    input[type=radio] {
+                        float: left;
+                    }
+                    label {
+                        display: block;
+                    }
+                </style>
+                <li>
+                <div style="height: auto;width: 100%;background-color: lightblue;border-radius: 25px">
+                    <label style="padding-left: 3%;padding-top: 30px" id="q+{{ question.id }}" lang="{{ question.correct }}">{{ question.question | safe}}</label>
+                    <br>
+                    <form>
+                        <label style="padding-left: 3%" type="radio" >
+                            <input type="radio" id="{{ question.id }}.1"  name="x+{{ question.id }}">
+                            <div id="{{ question.id }}.1.0" style="display: block">{{ question.op1 | safe }}</div>
+                            <div id="{{ question.id }}.1.1" style="display: none">{{ question.op1 | safe }}  &#9989</div>
+                            <div id="{{ question.id }}.1.2" style="display: none">{{ question.op1 | safe }}  &#10060</div>
+                        </label>
+                      <br>
+                      <label style="padding-left: 3%" type="radio">
+                            <input type="radio" id="{{ question.id }}.2"  name="x+{{ question.id }}">
+                            <div id="{{ question.id }}.2.0" style="display: block">{{ question.op2 | safe }}</div>
+                            <div id="{{ question.id }}.2.1" style="display: none">{{ question.op2 | safe }}  &#9989</div>
+                            <div id="{{ question.id }}.2.2" style="display: none">{{ question.op2 | safe }}  &#10060</div>
+                      </label>
+                      <br>
+                        <label style="padding-left: 3%" type="radio">
+                            <input type="radio" id="{{ question.id }}.3"  name="x+{{ question.id }}">
+                            <div id="{{ question.id }}.3.0" style="display: block">{{ question.op3 | safe }}</div>
+                            <div id="{{ question.id }}.3.1" style="display: none">{{ question.op3 | safe }}  &#9989</div>
+                            <div id="{{ question.id }}.3.2" style="display: none">{{ question.op3 | safe }}  &#10060</div>
+                        </label>
+                      <br>
+                      <label style="padding-left: 3%;padding-bottom: 30px" type="radio">
+                            <input type="radio" id="{{ question.id }}.4"  name="x+{{ question.id }}">
+                            <div id="{{ question.id }}.4.0" style="display: block">{{ question.op4 | safe }}</div>
+                            <div id="{{ question.id }}.4.1" style="display: none">{{ question.op4 | safe }}  &#9989</div>
+                            <div id="{{ question.id }}.4.2" style="display: none">{{ question.op4 | safe }}  &#10060</div>
+                      </label>
+                      <br>
+                    </form>
+                </div>
+                </li>
+                <br>
+            {% endfor %}
+        </ol>
+        <p style="display: none;padding-left: 5%" id ="score"></p>
+        <div style="padding-left: 5%">
+           <A href="/"><button class="button2" style="vertical-align:middle" ><span>Home</span></button></A>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="button2" style="vertical-align:middle" onclick="execute()"><span>Submit</span></button>
+        </div>
+        </div></div>
+    <script src="{{url_for('static',filename='quiz.js')}}"></script>
+{% endblock %}

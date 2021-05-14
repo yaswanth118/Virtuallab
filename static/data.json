@@ -1,0 +1,222 @@
+[
+{
+"question" : "Which one of the following cation is not present in Group II?",
+"op1" : "Zn<sup>2+</sup>",
+"op2" : "As<sup>3+</sup>",
+"op3" : "Cu<sup>2+</sup>",
+"op4" : "Pb<sup>2+</sup>",
+"correct" : 1
+},
+
+
+{
+"question" : "What is the color of manganese salts ?",
+"op1" : "Brown",
+"op2" : "Light pink",
+"op3" : "Red",
+"op4" : "Blue",
+"correct" : 2
+},
+
+
+{
+"question" : "Name the anions which are confirmed with the help of sodium carbonate extract.",
+"op1" : "s<sup>2-</sup>",
+"op2" : "CO<sub>3</sub><sup>2-</sup>",
+"op3" : "NO<sub>3</sub><sup>-</sup>",
+"op4" : "NO<sub>2</sub><sup>-</sup>",
+"correct" : 1
+},
+
+
+{
+"question" : "Name the radicals which are confirmed with the help of water extract.",
+"op1" : "cl<sup>-</sup>",
+"op2" : "I<sup>-</sup>",
+"op3" : "CO<sub>3<sub><sup>2-</sup>",
+"op4" : "N<sub>2</sub>O<sub>3-</sub>",
+"correct" : 4
+},
+{
+    "question": "CO<sub>2</sub> and SO<sub>2</sub> both turn lime water milky. How will you distinguish between them ?",
+    "op1": "By passing through ferrous sulphate solution",
+    "op2": "By passsing through potassium dichromate solution",
+    "op3": "By passing through sodium dichromate solution",
+    "op4": "By passing through calcium dichromate solution",
+    "correct": 2
+},
+{
+"question" : "Name the anion which produces CO<sub>2</sub> on heating.",
+"op1" : "Carbonate",
+"op2" : "Sulphate",
+"op3" : "Nitrate",
+"op4" : "Phosphate",
+"correct" : 1
+},
+
+{
+"question" : "What is the colour of nickel salts ?",
+"op1" : "Yellow",
+"op2" : "Bluish greeen",
+"op3" : "Red",
+"op4" : "Blue",
+"correct" : 2
+},
+
+{
+"question" : "Name the anion which can be detected on doing test by cone. H<sub>2</sub>SO<sub>4</sub>.",
+"op1" : "s<sup>2-</sup>",
+"op2" : "CO<sub>3</sub><sup>2-</sup>",
+"op3" : "Cl<sup>-</sup>",
+"op4" : "NO<sub>2</sub><sup>-</sup>",
+"correct" : 3
+},
+
+{
+"question" : " Is there any gas other than CO2 which turns lime water milky ?",
+"op1" : "NO<sub>2</sub>",
+"op2" : "SO<sub>2</sub>",
+"op3" : "CO",
+"op4" : "N<sub>2</sub>O<sub>3</sub>",
+"correct" : 2
+},
+
+{
+"question" : "Name the anion which can be detected on doing test by dil H<sub>2</sub>SO<sub>4</sub>.",
+"op1" : "I<sup>-</sup>",
+"op2" : "CO<sub>3</sub><sup>2-</sup>",
+"op3" : "Cl<sup>-</sup>",
+"op4" : "NO<sub>3</sub><sup>-</sup>",
+"correct" : 2
+},
+
+{
+"question" : "Which of the following steps is NOT part of qualitative analysis?",
+"op1" : "Cation tests",
+"op2" : "Heat tests",
+"op3" : "Melting point test",
+"op4" : "Solubility",
+"correct" : 3
+},
+
+{
+"question" : "A solution X when added into sodium carbonate solution turns limewater cloudy. which of the following is solution X?",
+"op1" : "Aqueous ammonia solution",
+"op2" : "Vinegar",
+"op3" : "Calcium hydroxide solution",
+"op4" : "Magnesium nitrate solution",
+"correct" : 2
+},
+
+{
+"question" : "When solid Y is heated strongly, a gas that turns limewater milky is produced, leaving a white residue. Which of the following could be solid Y?",
+"op1" : "Zinc carbonate",
+"op2" : "Lead(II) carbonate",
+"op3" : "Potassium carbonate",
+"op4" : "Magnesium carbonate",
+"correct" : 4
+},
+
+{
+"question" : "Solution M reacts with sodium hydroxide solution to form a white precipitate that is insoluble in excess sodium hydroxide solution. Which of the following ions is most likely present in solution M?",
+"op1" : "Magnesium ion",
+"op2" : "Lead(II) ion",
+"op3" : "Zinc ion",
+"op4" : "Ammonium ion",
+"correct" : 1
+},
+
+{
+"question" : "Salt X is added to sodium hydroxide solution and the mixture is heated. The gas evolved turns moist red litmus paper blue. What ion is present in salt X?",
+"op1" : "Nitrate ion",
+"op2" : "Ammonium ion",
+"op3" : "Carbonate ion",
+"op4" : "Lead(II) ion",
+"correct" : 2
+},
+{
+    "question":"The use of H<sub>2</sub>S as a reagent for qualitative analysis of cations is based on the fact that",
+    "op1":"H<sub>2</sub>S form coloured sulphides",
+    "op2":"H<sub>2</sub>S is a weak acid and we can control the degree of ionization of H<sub>2</sub>S by adding HCl or NH<sub>4</sub>OH",
+    "op3":"H<sub>2</sub>S is a weak acid",
+    "op4":"The colour of the metal sulphide precipitated depends upon the pH of the solution",
+    "correct":2
+},
+{
+    "question":"A Brown precipitate (A) dissolve in HNO<sub>3</sub>, gives (B) which gives white ppt (C) with NH<sub>4</sub>OH. (C) on reaction with HCl gives solution (D), which gives white turbidity on addition of water. What is the turbidity?",
+    "op1":"BiO(NO<sub>3</sub>)",
+    "op2":"Bi(OH)<sub>3</sub>",
+    "op3":"BiOCl",
+    "op4":"Bi(NO<sub>3</sub>)<sub>3</sub>",
+    "correct":3
+},
+{
+    "question":"The compound which does not respond to brown ring test",
+    "op1":"Pb(NO<sub>3</sub>)<sub>2</sub>",
+    "op2":"LiNO<sub>3</sub>",
+    "op3":"KNO<sub>3</sub>",
+    "op4":"NH<sub>4</sub>NO<sub>3</sub>",
+    "correct":1
+},
+{
+    "question":"A mixture contains Cu<sup>2+</sup>, Al<sup>3+</sup> and Ni<sup>2+</sup>. Following steps have been adopted for separation but written in disorder.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I. Filter, boil off H<sub>2</sub>S gas and NH<sub>4</sub>Cl, heat and add NH<sub>4</sub>OH<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; II. Filter, add NH<sub>4</sub>OH and pass H<sub>2</sub>S gas<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; III. Pass H<sub>2</sub>S gas into acidified solution of mixture <br>Steps will be used in the following order",
+    "op1":"I, II, III",
+    "op2":"II, I, III",
+    "op3":"III, II, I",
+    "op4":"III, I, II",
+    "correct":4
+},
+{
+    "question":"A white powder when strongly heated gives off brown fumes. A solution of this powder gives a yellow precipitate with KI. When a solution of barium chloride is added to a solution of powder, a white precipitate results. This white powder may be",
+    "op1":"A soluble Sulphate",
+    "op2":"KBr or NaBr",
+    "op3":"Ba(NO<sub>3</sub>)<sub>2</sub>",
+    "op4":"AgNO<sub>3</sub>",
+    "correct":4
+},
+{
+    "question":"Among PbS, CuS, HgS, MnS, CoS, Bi<sub>2</sub>S<sub>3</sub> , SnS<sub>2</sub> How many ore black in colour?",
+    "op1":"2",
+    "op2":"3",
+    "op3":"4",
+    "op4":"5",
+    "correct":4
+},
+{
+    "question":"Which of the following colour was wrongly mentioned?",
+    "op1":"Aqueous CuSO<sub>4</sub> is blue",
+    "op2":"Anhydrous sodium carbonate is brown",
+    "op3":"Aqueous ferric chloride is brown colour",
+    "op4":"Both PbCl<sub>2</sub> and AgCl are white precipitates",
+    "correct":2
+},
+{
+    "question":"M is a cation which exists as a nitrate compound in an aqueous solution. Part of this solution is separated and H<sub>2</sub>S gas is sent. Then a black precipitate is given. Next, another part of this M's nitrate solution is separated. When NaOH is added, white precipitate is given. With excess NaOH, white precipitate dissolve and give colourless solution. What could be the cation?",
+    "op1":"Silver",
+    "op2":"Sodium",
+    "op3":"Iron",
+    "op4":"Lead",
+    "correct":4
+},
+{
+    "question":"What is Colour of Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>?",
+    "op1":"Red",
+    "op2":"Green",
+    "op3":"Yellow",
+    "op4":"Blue",
+    "correct":3
+},
+{
+    "question":"Find the compound which undergoes nucleophilic substitution reaction exclusively by an SN1 mechanism",
+    "op1":"Benzyl chloride",
+    "op2":"Chlorobenzene",
+    "op3":"Ethyl chloride",
+    "op4":"Isopropyl chloride",
+    "correct":1
+}
+]
+
+
+
+
+

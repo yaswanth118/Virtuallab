@@ -24,17 +24,25 @@
              <button class="button2" onclick = "change_path()" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
                  <span>Start Test</span>
              </button>
+        </a>
           <script>
             var array=['/CuCO3','/ZnS','/BaCl2','/NH4NO3','/Fe2SO43'];
             function change_path(){
                document.getElementById('p').href=array[(Math.floor(Math.random()*10))%5];
             }
-          </script></a>
+          </script>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       	<a href="/Referlab/salt">
             <button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
                 <span>Lab Assistant</span>
+            </button>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/test/quiz">
+            <button class="button2" style="vertical-align:middle;font-size: 20px;padding: 12px;width: 200px">
+                <span>Take Test</span>
             </button>
         </a>
     {% endif %}

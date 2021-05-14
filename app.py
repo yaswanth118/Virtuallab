@@ -1,3 +1,4 @@
+import random
 import wtforms
 from flask import Flask, render_template, flash, redirect, url_for, session, request, logging
 from flask_mysqldb import MySQL
@@ -20,7 +21,7 @@ app.config.update(
 	MAIL_PASSWORD = 'Virtual@lab')
 mail = Mail(app)
 
-# Connecting with MySQL database.
+#Connecting with MySQL database.
 app.config['MYSQL_HOST'] = 'remotemysql.com'
 app.config['MYSQL_USER'] = 'nU0amtc0De'
 app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
@@ -33,6 +34,24 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 # app.config['MYSQL_DB'] = 'virtuallab'
 # app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
+#------------------------------------------------------------------------------------------------------------#
+@app.route('/test/quiz')
+def quiz():
+    cur = mysql.connection.cursor()
+    result =cur.execute("SELECT * FROM questions",[])
+    que = cur.fetchall()
+    l=[]
+    for i in que:
+        l.append(i['id'])
+    final_list = random.sample(l, (3*len(l))//5)
+    questions = []
+    for i in que:
+        for j in final_list:
+            if(j==i['id']):
+                questions.append(i);
+    return render_template('/test/quiz.html', questions=questions)
+    cur.close()
+
 
 #------------------------------------------------------------------------------------------------------------#
 # These HTML pages are the Quizzing section of Start Test.
@@ -312,8 +331,6 @@ def verify_reset_token(token):
     cur = mysql.connection.cursor()
     cur.execute("SELECT * FROM users WHERE username = %s", [user_id])
     return cur.fetchone();
-
-
 
 #-----------------------------------------------------------------------------------------------------------------#
 def send_reset_email(user):
@@ -613,6 +630,8 @@ def delete_article(id):
 if __name__ == '__main__':
     app.run()
 app.secret_key = 'secret123'
+
+
 
 
 
