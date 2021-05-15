@@ -40,17 +40,23 @@
                             <div id="{{ question.id }}.3.2" style="display: none">{{ question.op3 | safe }}  &#10060</div>
                         </label>
                       <br>
-                      <label style="padding-left: 3%;padding-bottom: 30px" type="radio">
+                      <label style="padding-left: 3%" type="radio">
                             <input type="radio" id="{{ question.id }}.4"  name="x+{{ question.id }}">
                             <div id="{{ question.id }}.4.0" style="display: block">{{ question.op4 | safe }}</div>
                             <div id="{{ question.id }}.4.1" style="display: none">{{ question.op4 | safe }}  &#9989</div>
                             <div id="{{ question.id }}.4.2" style="display: none">{{ question.op4 | safe }}  &#10060</div>
                       </label>
                       <br>
+                        <div style="padding: 3%;padding-bottom: 30px">
+                        <div class = "sol" style="display: none;border: 5px solid #464EB8;border-radius: 15px;padding: 40px;">
+                            <b>Solution:</b>
+                            <h> {{ question.solution | safe }}</h>
+                        </div>
+                            </div>
                     </form>
                 </div>
                 </li>
-                <br>
+                <hr style="height: 5px;border-width:0;color:#464EB8;background-color:#464EB8">
             {% endfor %}
         </ol>
         <p style="display: none;padding-left: 5%" id ="score"></p>

@@ -1,5 +1,7 @@
 var sum = 0;
+var flag=0;
 function execute(){
+    flag=1;
     for (var i = 1; i <= 25 ; i++) {
         var z= document.getElementById('q+'+i.toString());
         if(!z){
@@ -82,4 +84,8 @@ function execute(){
     }
     document.getElementById("score").innerHTML="You Score is "+sum.toString()
     document.getElementById("score").style.display="block"
+    var z=document.getElementsByClassName("sol")
+    for (var i = 0; i < z.length; i++) {
+        z[i].style.display="block"
+    }
 }
