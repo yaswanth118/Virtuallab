@@ -73,7 +73,7 @@
 },
 
 {
-"question" : " Is there any gas other than CO2 which turns lime water milky ?",
+"question" : " Is there any gas other than CO<sub>2</sub> which turns lime water milky ?",
 "op1" : "NO<sub>2</sub>",
 "op2" : "SO<sub>2</sub>",
 "op3" : "CO",
@@ -140,7 +140,8 @@
     "op2":"H<sub>2</sub>S is a weak acid and we can control the degree of ionization of H<sub>2</sub>S by adding HCl or NH<sub>4</sub>OH",
     "op3":"H<sub>2</sub>S is a weak acid",
     "op4":"The colour of the metal sulphide precipitated depends upon the pH of the solution",
-    "correct":2
+    "correct":2,
+    "solution" : "Self explanatory"
 },
 {
     "question":"A Brown precipitate (A) dissolve in HNO<sub>3</sub>, gives (B) which gives white ppt (C) with NH<sub>4</sub>OH. (C) on reaction with HCl gives solution (D), which gives white turbidity on addition of water. What is the turbidity?",
@@ -148,7 +149,8 @@
     "op2":"Bi(OH)<sub>3</sub>",
     "op3":"BiOCl",
     "op4":"Bi(NO<sub>3</sub>)<sub>3</sub>",
-    "correct":3
+    "correct":3,
+    "solution" : "<strong>Bi<sub>2</sub>S<sub>3</sub> (Brown) + 8HNO<sub>3</sub> &#8594; 2Bi(NO<sub>3</sub>)<sub>3</sub> + 4H<sub>2</sub>O + 2NO + 3S<br>Bi(NO<sub>3</sub>)<sub>3</sub> + 3NH<sub>4</sub>OH &#8594; Bi(OH)<sub>3</sub>&#8595; + 3NH<sub>4</sub>NO<sub>3</sub><br>Bi(OH)<sub>3</sub> + 3HCl &#8594; BiCl<sub>3</sub> + 3H<sub>2</sub>O<br>BiCl<sub>3</sub> + H<sub>2</sub>O &#8594; BiOCl&#8595; (White) + 2HCl</strong>"
 },
 {
     "question":"The compound which does not respond to brown ring test",
@@ -156,7 +158,8 @@
     "op2":"LiNO<sub>3</sub>",
     "op3":"KNO<sub>3</sub>",
     "op4":"NH<sub>4</sub>NO<sub>3</sub>",
-    "correct":1
+    "correct":1,
+    "solution" : "A common nitrate test, known as the brown ring test can be performed by adding iron sulphate to a solution of nitrate, then slowly adding concentrated sulphuric acid such that the acid forms a layer below the aqueous solution. When lead nitrate reacts with <strong>FeSO<sub>4</sub></strong> to form <strong>PbSO<sub>4</sub></strong> precipitate."
 },
 {
     "question":"A mixture contains Cu<sup>2+</sup>, Al<sup>3+</sup> and Ni<sup>2+</sup>. Following steps have been adopted for separation but written in disorder.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I. Filter, boil off H<sub>2</sub>S gas and NH<sub>4</sub>Cl, heat and add NH<sub>4</sub>OH<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; II. Filter, add NH<sub>4</sub>OH and pass H<sub>2</sub>S gas<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; III. Pass H<sub>2</sub>S gas into acidified solution of mixture <br>Steps will be used in the following order",
@@ -164,7 +167,9 @@
     "op2":"II, I, III",
     "op3":"III, II, I",
     "op4":"III, I, II",
-    "correct":4
+    "correct":4,
+    "solution" : "1. Passing <strong>H<sub>2</sub>S</strong> in acid medium precipitate <strong>CuS</strong> but not <strong>Al<sup>3+</sup></strong> and <strong>Ni<sup>2+</sup></strong>.<br>2. Addition of <strong>NH<sub>4</sub>Cl</strong> and <strong>NH<sub>4</sub>OH</strong> now precipitate <strong>Al(OH)<sub>3</sub></strong> but not <strong>Ni<sup>2+</sup></strong>.<br><strong>Ni<sup>2+</sup></strong> is precipitated as <strong>NiS</strong> in alkaline medium."
+
 },
 {
     "question":"A white powder when strongly heated gives off brown fumes. A solution of this powder gives a yellow precipitate with KI. When a solution of barium chloride is added to a solution of powder, a white precipitate results. This white powder may be",
@@ -172,7 +177,8 @@
     "op2":"KBr or NaBr",
     "op3":"Ba(NO<sub>3</sub>)<sub>2</sub>",
     "op4":"AgNO<sub>3</sub>",
-    "correct":4
+    "correct":4,
+    "solution" : "<strong>2AgNO<sub>3</sub> (White) &#8594; 2Ag + 2NO<sub>2</sub>&#8593; (Brown) + O<sub>2</sub><br>2AgNO<sub>3</sub> + BaCl<sub>2</sub> &#8594; Ba(NO<sub>3</sub>)<sub>2</sub> + 2AgCl&#8595;</strong>"
 },
 {
     "question":"Among PbS, CuS, HgS, MnS, CoS, Bi<sub>2</sub>S<sub>3</sub> , SnS<sub>2</sub> How many ore black in colour?",
@@ -180,7 +186,8 @@
     "op2":"3",
     "op3":"4",
     "op4":"5",
-    "correct":4
+    "correct":4,
+    "solution" : "<strong>PbS, CuS, HgS, Ag<sub>2</sub>S, NiS </strong> and <strong>CoS</strong> are black coloured. Therefore answer is five."
 },
 {
     "question":"Which of the following colour was wrongly mentioned?",
@@ -188,7 +195,8 @@
     "op2":"Anhydrous sodium carbonate is brown",
     "op3":"Aqueous ferric chloride is brown colour",
     "op4":"Both PbCl<sub>2</sub> and AgCl are white precipitates",
-    "correct":2
+    "correct":2,
+    "solution" : "Anhydrous <strong>Na<sub>2</sub>CO<sub>3</sub></strong> is colourless, whereas Hydrated <strong>Na<sub>2</sub>CO<sub>3</sub></strong> is brown colour."
 },
 {
     "question":"M is a cation which exists as a nitrate compound in an aqueous solution. Part of this solution is separated and H<sub>2</sub>S gas is sent. Then a black precipitate is given. Next, another part of this M's nitrate solution is separated. When NaOH is added, white precipitate is given. With excess NaOH, white precipitate dissolve and give colourless solution. What could be the cation?",
@@ -196,7 +204,8 @@
     "op2":"Sodium",
     "op3":"Iron",
     "op4":"Lead",
-    "correct":4
+    "correct":4,
+    "solution" : "Lead Nitrate exists as aqueous solution, Lead nitrate when reacted with <strong>H<sub>2</sub>S</strong> gas gives black precipitate of <strong>PbS</strong> and when reacted with <strong>Na(OH)</strong> gives white precipitate of <strong>Pb(OH)<sub>2</sub></strong>. Therefore cation is <strong>Pb<sup>2+</sup></strong>."
 },
 {
     "question":"What is Colour of Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>?",
@@ -204,7 +213,8 @@
     "op2":"Green",
     "op3":"Yellow",
     "op4":"Blue",
-    "correct":3
+    "correct":3,
+    "solution" : "<strong>Fe<sup>+3</sup></strong> ion is yellow in colour."
 },
 {
     "question":"Find the compound which undergoes nucleophilic substitution reaction exclusively by an SN1 mechanism",
@@ -212,7 +222,8 @@
     "op2":"Chlorobenzene",
     "op3":"Ethyl chloride",
     "op4":"Isopropyl chloride",
-    "correct":1
+    "correct":1,
+    "solution" : "Generally alpha benzyl undergo nucleophilic SN1 reaction. Therefore as Benzyl chloride is apha benzyl it undergoes SN1 reaction."
 }
 ]
 
