@@ -22,17 +22,17 @@ app.config.update(
 mail = Mail(app)
 
 #Connecting with MySQL database.
-# app.config['MYSQL_HOST'] = 'remotemysql.com'
-# app.config['MYSQL_USER'] = 'nU0amtc0De'
-# app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
-# app.config['MYSQL_DB'] = 'nU0amtc0De'
-# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
-
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'yaswanth2001'
-app.config['MYSQL_DB'] = 'virtuallab'
+app.config['MYSQL_HOST'] = 'remotemysql.com'
+app.config['MYSQL_USER'] = 'nU0amtc0De'
+app.config['MYSQL_PASSWORD'] = 'OOP4GV0SII'
+app.config['MYSQL_DB'] = 'nU0amtc0De'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'yaswanth2001'
+# app.config['MYSQL_DB'] = 'virtuallab'
+# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 #------------------------------------------------------------------------------------------------------------#
 @app.route('/test/quiz')
@@ -629,8 +629,8 @@ def delete_article(id):
     return redirect(url_for('dashboard'))
 
 if __name__ == '__main__':
-    app.secret_key = 'secret123'
     app.run()
+app.secret_key = 'secret123'
 
 
 
