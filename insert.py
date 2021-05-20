@@ -24,8 +24,8 @@ def validate_string(val):
 
 
 # connect to MySQL
-#con = pymysql.connect(host='remotemysql.com', user='nU0amtc0De', passwd='OOP4GV0SII', db='nU0amtc0De')
-con = pymysql.connect(host='localhost', user='root', passwd='yaswanth2001', db='virtuallab')
+con = pymysql.connect(host='remotemysql.com', user='nU0amtc0De', passwd='OOP4GV0SII', db='nU0amtc0De')
+# con = pymysql.connect(host='localhost', user='root', passwd='yaswanth2001', db='virtuallab')
 cursor = con.cursor()
 
 # parse json data to SQL insert

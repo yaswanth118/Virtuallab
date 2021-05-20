@@ -5,7 +5,8 @@
 "op2" : "As<sup>3+</sup>",
 "op3" : "Cu<sup>2+</sup>",
 "op4" : "Pb<sup>2+</sup>",
-"correct" : 1
+"correct" : 1,
+    "solution":   "<b>Cu<sup>2+</sup>, Cd<sup>2+</sup>, Pb<sup>2+</sup>, Hg<sup>2+</sup> (II), Bi<sup>3+</sup>, As<sup>3+</sup>, Sb<sup>3+</sup>, Sn<sup>2+</sup></b> are present in GROUP(II)"
 },
 
 
@@ -15,7 +16,8 @@
 "op2" : "Light pink",
 "op3" : "Red",
 "op4" : "Blue",
-"correct" : 2
+"correct" : 2,
+    "solution" : "Colour  of Manganese salts are Light pink "
 },
 
 
@@ -25,7 +27,9 @@
 "op2" : "CO<sub>3</sub><sup>2-</sup>",
 "op3" : "NO<sub>3</sub><sup>-</sup>",
 "op4" : "NO<sub>2</sub><sup>-</sup>",
-"correct" : 1
+"correct" : 1,
+    "solution" : "<b>S<sup>2-</sup>, Cl<sup>_</sup>, Br<sup>_</sup>, I<sup>_</sup>, PO<sub>4</sub><sup>3-</sup>, SO<sub>3</sub><sup>2-</sup>, SO<sub>4</sub><sup>2-</sup></b>. are identified by sodium extract.<br>   <b>Thiourea test:</b> Acidify 2-3 mL of soda extract with dilute acid. Boil off <b>CO<sub>2</sub></b>. To this add a pinch of thiourea and a few drops of dil HCl and ferric chloride solution. A characteristic blood red colouration indicates the presence of nitrite "
+
 },
 
 
@@ -35,7 +39,8 @@
 "op2" : "I<sup>-</sup>",
 "op3" : "CO<sub>3<sub><sup>2-</sup>",
 "op4" : "N<sub>2</sub>O<sub>3-</sub>",
-"correct" : 4
+"correct" : 4,
+    "solution" : "<b>NO<sub>3</sub><sup>_</sup>, NO<sub>2</sub><sup>_</sup> and CH3COO<sup>_</sup></b> are identified by water extract.<br><b> Lunge test or Diphenylamine test:</b> To the water extract or sodium carbonate extract neutralized with dil. <b>H<sub>2</sub>SO<sub>4</sub></b> acid, add a few mL of the diphenylamine reagent in a test tube. If a blue ring is formed at the zone of contact of the two liquids, it confirms nitrate"
 },
 {
     "question": "CO<sub>2</sub> and SO<sub>2</sub> both turn lime water milky. How will you distinguish between them ?",
@@ -43,7 +48,8 @@
     "op2": "By passsing through potassium dichromate solution",
     "op3": "By passing through sodium dichromate solution",
     "op4": "By passing through calcium dichromate solution",
-    "correct": 2
+    "correct": 2,
+    "solution" : "Sulphur dioxide turns potassium dichromate paper green whereas carbondioxide does not"
 },
 {
 "question" : "Name the anion which produces CO<sub>2</sub> on heating.",
@@ -51,7 +57,8 @@
 "op2" : "Sulphate",
 "op3" : "Nitrate",
 "op4" : "Phosphate",
-"correct" : 1
+"correct" : 1,
+    "solution" : "Metal carbonates on heating decompose into metal oxide and <b>CO<sub>2</sub></b>"
 },
 
 {
@@ -60,7 +67,8 @@
 "op2" : "Bluish greeen",
 "op3" : "Red",
 "op4" : "Blue",
-"correct" : 2
+"correct" : 2,
+    "solution" : "Colour of Nickel salts is Bluish green or Green"
 },
 
 {
@@ -69,7 +77,8 @@
 "op2" : "CO<sub>3</sub><sup>2-</sup>",
 "op3" : "Cl<sup>-</sup>",
 "op4" : "NO<sub>2</sub><sup>-</sup>",
-"correct" : 3
+"correct" : 3,
+    "solution" : "Chloride salts react with conc. <b>H<sub>2</sub>SO<sub>4</sub></b> to evolve hydrogen chloride <b>(HCl)</b> gas and bisulphate by which we can identify chlorine"
 },
 
 {
@@ -78,7 +87,8 @@
 "op2" : "SO<sub>2</sub>",
 "op3" : "CO",
 "op4" : "N<sub>2</sub>O<sub>3</sub>",
-"correct" : 2
+"correct" : 2,
+    "solution" : "<b>SO<sub>2</sub></b> reacts with lime water <b>(Ca(OH)<sub>2</sub>)</b>  and gives Calcium sulphite which is white in colour."
 },
 
 {
@@ -87,7 +97,8 @@
 "op2" : "CO<sub>3</sub><sup>2-</sup>",
 "op3" : "Cl<sup>-</sup>",
 "op4" : "NO<sub>3</sub><sup>-</sup>",
-"correct" : 2
+"correct" : 2,
+    "solution" : "Dilute <b>H<sub>2</sub>SO<sub>4</sub></b> decomposes carbonates, sulphides, sulphites and nitrites in cold to give gases. These gases on identification indicate the nature of the anion present in the salt.On treating dil.H<sub>2</sub>SO<sub>4</sub>  with the solid carbonate, <b>CO<sub>2</sub></b> is given off in the cold with brisk effervescence."
 },
 
 {
@@ -96,7 +107,9 @@
 "op2" : "Heat tests",
 "op3" : "Melting point test",
 "op4" : "Solubility",
-"correct" : 3
+"correct" : 3,
+    "solution" : "Melting Point Test is not a part of Qualitative analysis."
+
 },
 
 {
@@ -105,7 +118,8 @@
 "op2" : "Vinegar",
 "op3" : "Calcium hydroxide solution",
 "op4" : "Magnesium nitrate solution",
-"correct" : 2
+"correct" : 2,
+    "solution" : "For limewater to turn cloudy, <b>CO<sub>2</sub></b> gas should form.To get <b>CO<sub>2</sub></b> from <b>Na<sub>2</sub>CO<sub>3</sub></b>, we should use acid. Among the options Vineger is the only acid present."
 },
 
 {
@@ -114,7 +128,8 @@
 "op2" : "Lead(II) carbonate",
 "op3" : "Potassium carbonate",
 "op4" : "Magnesium carbonate",
-"correct" : 4
+"correct" : 4,
+    "solution" : "<b>MgCO<sub>3</sub></b> on heating gives <b>CO<sub>2</sub></b> which turns limewater milky and <b>MgO</b> which is a white residue."
 },
 
 {
@@ -123,7 +138,8 @@
 "op2" : "Lead(II) ion",
 "op3" : "Zinc ion",
 "op4" : "Ammonium ion",
-"correct" : 1
+"correct" : 1,
+    "solution" : "Among the options, <b>Mg(OH)<sub>2</sub></b> is insoluble in excess of <b>NaOH</b>.So <b>Mg<sup>+2</sup></b> is the answer."
 },
 
 {
@@ -132,7 +148,8 @@
 "op2" : "Ammonium ion",
 "op3" : "Carbonate ion",
 "op4" : "Lead(II) ion",
-"correct" : 2
+"correct" : 2,
+    "solution" : "The gas formed is Basic. Among the given options, only the salt with Ammonium Ion can give basic <b>NH<sub>3</sub></b> gas after reaction with <b>NaOH</b>"
 },
 {
     "question":"The use of H<sub>2</sub>S as a reagent for qualitative analysis of cations is based on the fact that",
@@ -150,7 +167,7 @@
     "op3":"BiOCl",
     "op4":"Bi(NO<sub>3</sub>)<sub>3</sub>",
     "correct":3,
-    "solution" : "<strong>Bi<sub>2</sub>S<sub>3</sub> (Brown) + 8HNO<sub>3</sub> &#8594; 2Bi(NO<sub>3</sub>)<sub>3</sub> + 4H<sub>2</sub>O + 2NO + 3S<br>Bi(NO<sub>3</sub>)<sub>3</sub> + 3NH<sub>4</sub>OH &#8594; Bi(OH)<sub>3</sub>&#8595; + 3NH<sub>4</sub>NO<sub>3</sub><br>Bi(OH)<sub>3</sub> + 3HCl &#8594; BiCl<sub>3</sub> + 3H<sub>2</sub>O<br>BiCl<sub>3</sub> + H<sub>2</sub>O &#8594; BiOCl&#8595; (White) + 2HCl</strong>"
+    "solution" : "<b>Bi<sub>2</sub>S<sub>3</sub> (Brown) + 8HNO<sub>3</sub> &#8594; 2Bi(NO<sub>3</sub>)<sub>3</sub> + 4H<sub>2</sub>O + 2NO + 3S<br>Bi(NO<sub>3</sub>)<sub>3</sub> + 3NH<sub>4</sub>OH &#8594; Bi(OH)<sub>3</sub>&#8595; + 3NH<sub>4</sub>NO<sub>3</sub><br>Bi(OH)<sub>3</sub> + 3HCl &#8594; BiCl<sub>3</sub> + 3H<sub>2</sub>O<br>BiCl<sub>3</sub> + H<sub>2</sub>O &#8594; BiOCl&#8595; (White) + 2HCl</b>"
 },
 {
     "question":"The compound which does not respond to brown ring test",
@@ -159,7 +176,7 @@
     "op3":"KNO<sub>3</sub>",
     "op4":"NH<sub>4</sub>NO<sub>3</sub>",
     "correct":1,
-    "solution" : "A common nitrate test, known as the brown ring test can be performed by adding iron sulphate to a solution of nitrate, then slowly adding concentrated sulphuric acid such that the acid forms a layer below the aqueous solution. When lead nitrate reacts with <strong>FeSO<sub>4</sub></strong> to form <strong>PbSO<sub>4</sub></strong> precipitate."
+    "solution" : "A common nitrate test, known as the brown ring test can be performed by adding iron sulphate to a solution of nitrate, then slowly adding concentrated sulphuric acid such that the acid forms a layer below the aqueous solution. When lead nitrate reacts with <b>FeSO<sub>4</sub></b> to form <b>PbSO<sub>4</sub></b> precipitate."
 },
 {
     "question":"A mixture contains Cu<sup>2+</sup>, Al<sup>3+</sup> and Ni<sup>2+</sup>. Following steps have been adopted for separation but written in disorder.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I. Filter, boil off H<sub>2</sub>S gas and NH<sub>4</sub>Cl, heat and add NH<sub>4</sub>OH<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; II. Filter, add NH<sub>4</sub>OH and pass H<sub>2</sub>S gas<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; III. Pass H<sub>2</sub>S gas into acidified solution of mixture <br>Steps will be used in the following order",
@@ -168,7 +185,7 @@
     "op3":"III, II, I",
     "op4":"III, I, II",
     "correct":4,
-    "solution" : "1. Passing <strong>H<sub>2</sub>S</strong> in acid medium precipitate <strong>CuS</strong> but not <strong>Al<sup>3+</sup></strong> and <strong>Ni<sup>2+</sup></strong>.<br>2. Addition of <strong>NH<sub>4</sub>Cl</strong> and <strong>NH<sub>4</sub>OH</strong> now precipitate <strong>Al(OH)<sub>3</sub></strong> but not <strong>Ni<sup>2+</sup></strong>.<br><strong>Ni<sup>2+</sup></strong> is precipitated as <strong>NiS</strong> in alkaline medium."
+    "solution" : "1. Passing <b>H<sub>2</sub>S</b> in acid medium precipitate <b>CuS</b> but not <b>Al<sup>3+</sup></b> and <b>Ni<sup>2+</sup></b>.<br>2. Addition of <b>NH<sub>4</sub>Cl</b> and <b>NH<sub>4</sub>OH</b> now precipitate <b>Al(OH)<sub>3</sub></b> but not <b>Ni<sup>2+</sup></b>.<br><b>Ni<sup>2+</sup></b> is precipitated as <b>NiS</b> in alkaline medium."
 
 },
 {
@@ -178,7 +195,7 @@
     "op3":"Ba(NO<sub>3</sub>)<sub>2</sub>",
     "op4":"AgNO<sub>3</sub>",
     "correct":4,
-    "solution" : "<strong>2AgNO<sub>3</sub> (White) &#8594; 2Ag + 2NO<sub>2</sub>&#8593; (Brown) + O<sub>2</sub><br>2AgNO<sub>3</sub> + BaCl<sub>2</sub> &#8594; Ba(NO<sub>3</sub>)<sub>2</sub> + 2AgCl&#8595;</strong>"
+    "solution" : "<b>2AgNO<sub>3</sub> (White) &#8594; 2Ag + 2NO<sub>2</sub>&#8593; (Brown) + O<sub>2</sub><br>2AgNO<sub>3</sub> + BaCl<sub>2</sub> &#8594; Ba(NO<sub>3</sub>)<sub>2</sub> + 2AgCl&#8595;</b>"
 },
 {
     "question":"Among PbS, CuS, HgS, MnS, CoS, Bi<sub>2</sub>S<sub>3</sub> , SnS<sub>2</sub> How many ore black in colour?",
@@ -187,7 +204,7 @@
     "op3":"4",
     "op4":"5",
     "correct":4,
-    "solution" : "<strong>PbS, CuS, HgS, Ag<sub>2</sub>S, NiS </strong> and <strong>CoS</strong> are black coloured. Therefore answer is five."
+    "solution" : "<b>PbS, CuS, HgS, Ag<sub>2</sub>S, NiS </b> and <b>CoS</b> are black coloured. Therefore answer is five."
 },
 {
     "question":"Which of the following colour was wrongly mentioned?",
@@ -196,7 +213,7 @@
     "op3":"Aqueous ferric chloride is brown colour",
     "op4":"Both PbCl<sub>2</sub> and AgCl are white precipitates",
     "correct":2,
-    "solution" : "Anhydrous <strong>Na<sub>2</sub>CO<sub>3</sub></strong> is colourless, whereas Hydrated <strong>Na<sub>2</sub>CO<sub>3</sub></strong> is brown colour."
+    "solution" : "Anhydrous <b>Na<sub>2</sub>CO<sub>3</sub></b> is colourless, whereas Hydrated <b>Na<sub>2</sub>CO<sub>3</sub></b> is brown colour."
 },
 {
     "question":"M is a cation which exists as a nitrate compound in an aqueous solution. Part of this solution is separated and H<sub>2</sub>S gas is sent. Then a black precipitate is given. Next, another part of this M's nitrate solution is separated. When NaOH is added, white precipitate is given. With excess NaOH, white precipitate dissolve and give colourless solution. What could be the cation?",
@@ -205,7 +222,7 @@
     "op3":"Iron",
     "op4":"Lead",
     "correct":4,
-    "solution" : "Lead Nitrate exists as aqueous solution, Lead nitrate when reacted with <strong>H<sub>2</sub>S</strong> gas gives black precipitate of <strong>PbS</strong> and when reacted with <strong>Na(OH)</strong> gives white precipitate of <strong>Pb(OH)<sub>2</sub></strong>. Therefore cation is <strong>Pb<sup>2+</sup></strong>."
+    "solution" : "Lead Nitrate exists as aqueous solution, Lead nitrate when reacted with <b>H<sub>2</sub>S</b> gas gives black precipitate of <b>PbS</b> and when reacted with <b>Na(OH)</b> gives white precipitate of <b>Pb(OH)<sub>2</sub></b>. Therefore cation is <b>Pb<sup>2+</sup></b>."
 },
 {
     "question":"What is Colour of Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>?",
@@ -214,7 +231,7 @@
     "op3":"Yellow",
     "op4":"Blue",
     "correct":3,
-    "solution" : "<strong>Fe<sup>+3</sup></strong> ion is yellow in colour."
+    "solution" : "<b>Fe<sup>+3</sup></b> ion is yellow in colour."
 },
 {
     "question":"Find the compound which undergoes nucleophilic substitution reaction exclusively by an SN1 mechanism",
