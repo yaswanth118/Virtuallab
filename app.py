@@ -49,7 +49,6 @@ def quiz():
         for j in final_list:
             if(j==i['id']):
                 questions.append(i);
-    random.shuffle(questions);
     return render_template('/test/quiz.html', questions=questions)
     cur.close()
 
